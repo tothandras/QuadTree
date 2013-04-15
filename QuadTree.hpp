@@ -22,7 +22,8 @@ class QuadTreeNode{
     bool hasdata;
     unsigned int level;
     QuadTreeNode();
-    QuadTreeNode(T Data, unsigned int level, QuadTree<T> *root, QuadTreeNode *parent=NULL): root(root), parent(parent), children{NULL, NULL, NULL, NULL}, data(Data), level(level){}
+    QuadTreeNode(unsigned int level, QuadTree<T> *root, QuadTreeNode *parent=NULL): root(root), parent(parent), children{NULL, NULL, NULL, NULL}, hasdata(false), level(level){}
+    QuadTreeNode(T Data, unsigned int level, QuadTree<T> *root, QuadTreeNode *parent=NULL): root(root), parent(parent), children{NULL, NULL, NULL, NULL}, data(Data), hasdata(true),level(level){}
     ~QuadTreeNode(){
         for (unsigned int i=0; i<4; ++i)
             delete children[i];
@@ -34,9 +35,10 @@ public:
     void addChildren(T Data){
         for (unsigned int i=0; i<4; ++i){
             if (children[i]==NULL){
-                children[i] = new QuadTreeNode(Data);
+                children[i] = new QuadTreeNode(Data, level+1, root, this);
             }
         }
+        addChildren(Data);
     }
     void deleteChildren(){
         if (*this==NULL)
@@ -62,6 +64,9 @@ public:
         root = new QuadTreeNode<T>(Data, 0, this);
     }
     ~QuadTree(){delete root;}
+    void insert(T Data){
+        
+    }
     friend class QuadTreeNode<T>;
     template <typename t>
     friend std::ostream& operator<<(std::ostream &,const QuadTree<t> &);
