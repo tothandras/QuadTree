@@ -30,16 +30,8 @@ class QuadTreeNode{
     }
 public:
     bool hasData(){return hasdata;}
-    T getData(){return data;}
-    void addData(T Data){data=Data;}
-    void addChildren(T Data){
-        for (unsigned int i=0; i<4; ++i){
-            if (children[i]==NULL){
-                children[i] = new QuadTreeNode(Data, level+1, root, this);
-            }
-        }
-        addChildren(Data);
-    }
+    T& getData(){return data;}
+    unsigned int get_level(){return level;}
     void deleteChildren(){
         if (*this==NULL)
             return;
@@ -67,9 +59,48 @@ public:
     void insert(T Data){
         
     }
+    unsigned int depth(){}
+    class iterator;
+    class pre_order_iterator;
+    class post_order_iterator;
+    class sibling_iterator;
+    class leaf_iterator;
+    pre_order_iterator pre_order_begin();
+    pre_order_iterator pre_order_end();
+    post_order_iterator post_order_begin();
+    post_order_iterator post_order_end();
+    sibling_iterator sibling_begin();
+    sibling_iterator sibling_end();
+    leaf_iterator leaf_begin();
+    leaf_iterator leaf_end();
+    QuadTreeNode<T>* getRootNode(){return root;}
     friend class QuadTreeNode<T>;
     template <typename t>
     friend std::ostream& operator<<(std::ostream &,const QuadTree<t> &);
+};
+
+template <class T>
+class QuadTree<T>::iterator{
+    QuadTreeNode<T> *Node;
+public:
+    iterator(QuadTreeNode<T> *Node=NULL): Node(Node){}
+    QuadTreeNode<T>& operator*(){return *Node;}
+    QuadTreeNode<T>* operator&(){return Node;}
+    QuadTreeNode<T>* operator->(){return Node;}
+    virtual iterator& operator++();
+    virtual iterator operator++(int);
+    virtual iterator& operator+=(unsigned int);
+    bool operator==(const iterator& iter){
+        return Node==iter.Node;
+    }
+    bool operator!=(const iterator& iter){
+        return Node!=iter.Node;
+    }
+};
+
+template <class T>
+class QuadTree<T>::leaf_iterator :public QuadTree<T>::iterator{
+public:
 };
 
 template <typename T>
