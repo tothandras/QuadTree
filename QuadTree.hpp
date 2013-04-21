@@ -112,7 +112,7 @@ public:
     }
     /// Konstruktor. (Adattal)
     QuadTree(T Data){
-        root = new QuadTreeNode<T>(Data, 0);
+        root = new QuadTreeNode<T>(Data);
     }
     /// Destruktor.
     ~QuadTree(){delete root;}
