@@ -68,7 +68,7 @@ public:
             ++i;
         children[i]=new QuadTreeNode(data, level+1, this);
     }
-    /// Csopontról eldönti hogy levél-e.
+    /// Csomópontról eldönti hogy levél-e.
     /// @return - Levél?
     bool isLeaf() const{return (children[0]==NULL && children[1]==NULL && children[2]==NULL && children[3]==NULL);}
     /// Fa/részfa mélységének visszaadása rekurzív függvényhívással.
