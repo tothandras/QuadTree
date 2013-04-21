@@ -12,8 +12,8 @@
 int main(int argc, const char * argv[])
 {
 
-    QuadTree<double> d(0);
+    QuadTree<double> d(1);
     QuadTree<double>::pre_order_iterator iter;
-    std::cout << d;
+    std::cout << d << " " << d.depth();
     return 0;
 }

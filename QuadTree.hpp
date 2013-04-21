@@ -51,6 +51,7 @@ public:
 template <typename T>
 class QuadTree{
     QuadTreeNode<T> *root;
+    QuadTree(QuadTreeNode<T> *QuadTreeNode): root(QuadTreeNode){}
 public:
     QuadTree(T Data){
         root = new QuadTreeNode<T>(Data, 0);
@@ -61,7 +62,16 @@ public:
         for(iter=pre_order_begin(); iter!=pre_order_end(); ++iter)
             ;
     }
-    unsigned int depth(){}
+    unsigned int depth(){
+        unsigned int depth[4], max=0;
+        if(root==NULL) return 0;
+        for(size_t i=0; i<4; ++i)
+            depth[i]=QuadTree(root->children[i]).depth();
+        for(size_t i=0; i<4; ++i)
+            if(max<depth[i])
+                max=depth[i];
+        return max+1;
+    }
     class iterator;
     class pre_order_iterator;
     class post_order_iterator;
@@ -69,8 +79,6 @@ public:
     class leaf_iterator;
     pre_order_iterator pre_order_begin(){return pre_order_iterator(root);};
     pre_order_iterator pre_order_end();
-    post_order_iterator post_order_begin();
-    post_order_iterator post_order_end();
     sibling_iterator sibling_begin(unsigned int level){
         QuadTreeNode<T> *temp=root;
         while(temp->children[0].getLevel() != level || temp != NULL)
@@ -93,9 +101,10 @@ public:
 
 template <class T>
 class QuadTree<T>::iterator{
+protected:
     QuadTreeNode<T> *Node;
-public:
     iterator(QuadTreeNode<T> *Node=NULL): Node(Node){}
+public:
     QuadTreeNode<T>& operator*(){return *Node;}
     QuadTreeNode<T>* operator&(){return Node;}
     QuadTreeNode<T>* operator->(){return Node;}
@@ -108,23 +117,43 @@ public:
 };
 
 template <class T>
-class QuadTree<T>::pre_order_iterator :public QuadTree<T>::iterator{
+class QuadTree<T>::pre_order_iterator :protected QuadTree<T>::iterator{
 public:
     pre_order_iterator& operator++(){return pre_order_iterator(this->Node);}
     pre_order_iterator operator++(int){
         QuadTreeNode<T> *temp=this->Node;
-        if(this->Node==NULL)
-            return NULL;
-        size_t i=0;
+        if(temp==NULL)
+            return pre_order_iterator(NULL);
+        size_t i=0, j=0;
         while(temp->parent->children[i]!=temp)
             ++i;
-        if(i<3 && temp->parent->children[i+1]!=NULL)
+        if(i<3 && temp->parent->children[i+1]!=NULL) //2. feltetel majd elhagyhato
             this->Node=temp->parent->children[i+1];
-        else
-            this->Node=0;
+        else{
+            while(temp->parent->parent->children[j]!=temp->parent)
+                ++j;
+            if(j<3 && !temp->parent->parent->children[j+1]->isLeaf())
+                this->Node=temp->parent->parent->children[j+1]->children[0];
+            else
+                ;
+        }
+        return pre_order_iterator(this->Node);
     }
     pre_order_iterator& operator+=(unsigned int){return pre_order_iterator(this->Node);}
 };
+
+template <class T>
+class QuadTree<T>::sibling_iterator :public QuadTree<T>::iterator{
+public:
+    sibling_iterator& operator++(){return pre_order_iterator(this->Node);}
+    sibling_iterator operator++(int){
+        QuadTreeNode<T> *temp=this->Node;
+        
+        return sibling_iterator(this->Node);
+    }
+    sibling_iterator& operator+=(unsigned int){return pre_order_iterator(this->Node);}
+};
+
 
 template <class T>
 class QuadTree<T>::leaf_iterator :public QuadTree<T>::iterator{
