@@ -1,10 +1,7 @@
-//
+//  Tóth András
 //  QuadTree.hpp
 //  NHF - QuadTree
 //
-
-#ifndef __NHF___QuadTree__QuadTree__
-#define __NHF___QuadTree__QuadTree__
 
 #include <iostream>
 
@@ -201,5 +198,3 @@ std::ostream& operator<<(std::ostream & os, const QuadTreeNode<T> & Node){
     os << Node.data;
     return os;
 }
-    
-#endif /* defined(__NHF___QuadTree__QuadTree__) */
