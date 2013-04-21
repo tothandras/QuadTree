@@ -12,6 +12,7 @@ int main(int argc, const char * argv[])
     for (size_t i=0; i<16; ++i) {
         d.insert(i);
     }
+    std::cout << d.getRootNode()->countLeafs() << std::endl;
     std::cout << d << "\ndepth: " << d.depth();
     return 0;
 }

@@ -69,6 +69,11 @@ public:
         if (this==NULL) return 0;
         return children[0]->countElements()+children[1]->countElements()+children[2]->countElements()+children[3]->countElements()+ 1;
     }
+    unsigned int countLeafs() const{
+        if (this==NULL) return 0;
+        if (isLeaf()) return 1;
+        return children[0]->countLeafs()+children[1]->countLeafs()+children[2]->countLeafs()+children[3]->countLeafs();
+    }
     friend class QuadTree<T>;
     template <typename t>
     friend std::ostream& operator<<(std::ostream & os, const QuadTreeNode<t> & Node);
@@ -84,24 +89,17 @@ public:
     ~QuadTree(){delete root;}
     void insert(T data){
         QuadTreeNode<T>* temp=root;
-        unsigned int elements[4], depth[4], min;
+        unsigned int elements[4], min;
         bool inserted=false;
         
         while(!inserted){
             if(temp->children[0]==NULL || temp->children[1]==NULL || temp->children[2]==NULL || temp->children[3]==NULL){
-                temp->insert(data);
+                size_t i=0;
+                for(i=0; temp->children[i]!=NULL; ++i);
+                temp->children[i]=new QuadTreeNode<T>(data, temp->level+1, temp);
                 inserted=true;
-        }
+            }
             else{
-                
-                /*for(size_t i=0; i<4; ++i)
-                    depth[i]=temp->children[i]->depth();
-                min=depth[0];
-                for(size_t i=0; i<4; ++i)
-                    if(min>depth[i])
-                        min=depth[i];
-                size_t i;
-                for(i=0; min!=depth[i]; ++i);*/
                 size_t i;
                 for(i=0; i<4; ++i)
                     elements[i]=temp->children[i]->countElements();
