@@ -1,9 +1,6 @@
 //
-//  QuadTree.h
+//  QuadTree.hpp
 //  NHF - QuadTree
-//
-//  Created by Tóth András on 2013.04.12..
-//  Copyright (c) 2013 Tóth András. All rights reserved.
 //
 
 #ifndef __NHF___QuadTree__QuadTree__
@@ -15,15 +12,22 @@ class QuadTree;
 
 template <typename T>
 class QuadTreeNode{
-    //QuadTree<T> *root;
+    // szülő
     QuadTreeNode *parent;
+    // 4 gyerek
     QuadTreeNode *children[4];
+    // generikus adat
     T data;
+    // van-e adat? adattal lett létrehozva?
     bool hasdata;
+    // szint
     unsigned int level;
+    // nincs alapértelmezett konstruktora
     QuadTreeNode();
+    // és csak a QuadTree tud létrehozni újabb csomópontot
     QuadTreeNode(unsigned int level, QuadTreeNode *parent=NULL): parent(parent), children{NULL, NULL, NULL, NULL}, hasdata(false), level(level){}
     QuadTreeNode(T Data, unsigned int level, QuadTreeNode *parent=NULL): parent(parent), children{NULL, NULL, NULL, NULL}, data(Data), hasdata(true),level(level){}
+    // ha delete NULL hívódna meg, az nem gond, ezért nem vizsgálja
     ~QuadTreeNode(){
         for (size_t i=0; i<4; ++i)
             delete children[i];
@@ -42,7 +46,29 @@ public:
             }
         delete data;
     }
+    void insert(T data){
+        size_t i=0;
+        while(children[i]!=NULL && i<4)
+            ++i;
+        children[i]=new QuadTreeNode(data, level+1, this);
+    }
     bool isLeaf() const{return (children[0]==NULL && children[1]==NULL && children[2]==NULL && children[3]==NULL);}
+    // rekurzív megoldás
+    unsigned int depth() const{
+        unsigned int depth[4], max=0;
+        if(this==NULL) return 0;
+        for(size_t i=0; i<4; ++i)
+            depth[i]=this->children[i]->depth();
+        for(size_t i=0; i<4; ++i)
+            if(max<depth[i])
+                max=depth[i];
+        return max+1;
+    }
+    // reszfaban levo elemek megszamolasa
+    unsigned int countElements() const{
+        if (this==NULL) return 0;
+        return children[0]->countElements()+children[1]->countElements()+children[2]->countElements()+children[3]->countElements()+ 1;
+    }
     friend class QuadTree<T>;
     template <typename t>
     friend std::ostream& operator<<(std::ostream & os, const QuadTreeNode<t> & Node);
@@ -51,48 +77,47 @@ public:
 template <typename T>
 class QuadTree{
     QuadTreeNode<T> *root;
-    QuadTree(QuadTreeNode<T> *QuadTreeNode): root(QuadTreeNode){}
 public:
     QuadTree(T Data){
         root = new QuadTreeNode<T>(Data, 0);
     }
     ~QuadTree(){delete root;}
-    void insert(T Data){
-        pre_order_iterator iter;
-        for(iter=pre_order_begin(); iter!=pre_order_end(); ++iter)
-            ;
+    void insert(T data){
+        QuadTreeNode<T>* temp=root;
+        unsigned int elements[4], depth[4], min;
+        bool inserted=false;
+        
+        while(!inserted){
+            if(temp->children[0]==NULL || temp->children[1]==NULL || temp->children[2]==NULL || temp->children[3]==NULL){
+                temp->insert(data);
+                inserted=true;
+        }
+            else{
+                
+                /*for(size_t i=0; i<4; ++i)
+                    depth[i]=temp->children[i]->depth();
+                min=depth[0];
+                for(size_t i=0; i<4; ++i)
+                    if(min>depth[i])
+                        min=depth[i];
+                size_t i;
+                for(i=0; min!=depth[i]; ++i);*/
+                size_t i;
+                for(i=0; i<4; ++i)
+                    elements[i]=temp->children[i]->countElements();
+                min=elements[0];
+                for(i=0; i<4; ++i)
+                    if(min>elements[i])
+                        min=elements[i];
+                for(i=0; min!=elements[i]; ++i);
+                    temp=temp->children[i];
+            }
+        }
     }
-    unsigned int depth(){
-        unsigned int depth[4], max=0;
-        if(root==NULL) return 0;
-        for(size_t i=0; i<4; ++i)
-            depth[i]=QuadTree(root->children[i]).depth();
-        for(size_t i=0; i<4; ++i)
-            if(max<depth[i])
-                max=depth[i];
-        return max+1;
-    }
+    unsigned int depth(){return root->depth();}
     class iterator;
-    class pre_order_iterator;
-    class post_order_iterator;
-    class sibling_iterator;
-    class leaf_iterator;
-    pre_order_iterator pre_order_begin(){return pre_order_iterator(root);};
-    pre_order_iterator pre_order_end();
-    sibling_iterator sibling_begin(unsigned int level){
-        QuadTreeNode<T> *temp=root;
-        while(temp->children[0].getLevel() != level || temp != NULL)
-            temp=temp->children[0];
-        return sibling_iterator(temp);
-    }
-    sibling_iterator sibling_end(unsigned int level);
-    leaf_iterator leaf_begin(){
-        QuadTreeNode<T> *temp=root;
-        while(!temp->children[0].isLeaf())
-            temp=temp->children[0];
-        return leaf_iterator(temp->children[0]);
-    }
-    leaf_iterator leaf_end(){return leaf_iterator(NULL);}
+    iterator begin(){}
+    iterator end(){}
     QuadTreeNode<T>* getRootNode(){return root;}
     friend class QuadTreeNode<T>;
     template <typename t>
@@ -108,56 +133,14 @@ public:
     QuadTreeNode<T>& operator*(){return *Node;}
     QuadTreeNode<T>* operator&(){return Node;}
     QuadTreeNode<T>* operator->(){return Node;}
+    iterator& operator++(){}
+    iterator operator++(int){}
     bool operator==(const iterator& iter){
         return Node==iter.Node;
     }
     bool operator!=(const iterator& iter){
         return Node!=iter.Node;
     }
-};
-
-template <class T>
-class QuadTree<T>::pre_order_iterator :protected QuadTree<T>::iterator{
-public:
-    pre_order_iterator& operator++(){return pre_order_iterator(this->Node);}
-    pre_order_iterator operator++(int){
-        QuadTreeNode<T> *temp=this->Node;
-        if(temp==NULL)
-            return pre_order_iterator(NULL);
-        size_t i=0, j=0;
-        while(temp->parent->children[i]!=temp)
-            ++i;
-        if(i<3 && temp->parent->children[i+1]!=NULL) //2. feltetel majd elhagyhato
-            this->Node=temp->parent->children[i+1];
-        else{
-            while(temp->parent->parent->children[j]!=temp->parent)
-                ++j;
-            if(j<3 && !temp->parent->parent->children[j+1]->isLeaf())
-                this->Node=temp->parent->parent->children[j+1]->children[0];
-            else
-                ;
-        }
-        return pre_order_iterator(this->Node);
-    }
-    pre_order_iterator& operator+=(unsigned int){return pre_order_iterator(this->Node);}
-};
-
-template <class T>
-class QuadTree<T>::sibling_iterator :public QuadTree<T>::iterator{
-public:
-    sibling_iterator& operator++(){return pre_order_iterator(this->Node);}
-    sibling_iterator operator++(int){
-        QuadTreeNode<T> *temp=this->Node;
-        
-        return sibling_iterator(this->Node);
-    }
-    sibling_iterator& operator+=(unsigned int){return pre_order_iterator(this->Node);}
-};
-
-
-template <class T>
-class QuadTree<T>::leaf_iterator :public QuadTree<T>::iterator{
-public:
 };
 
 template <typename T>
@@ -172,10 +155,11 @@ template <typename T>
 std::ostream& operator<<(std::ostream & os, const QuadTreeNode<T> & Node){
     if (&Node==NULL)
         return os;
-    for (size_t i=0; i<4; ++i)
+    for (size_t i=0; i<4; ++i){
         os << *Node.children[i];
+        if (Node.children[i]!=NULL && !Node.isLeaf()) os << ", ";
+    }
     os << Node.data;
-    if (!Node.isLeaf()) os << ",";
     return os;
 }
     
