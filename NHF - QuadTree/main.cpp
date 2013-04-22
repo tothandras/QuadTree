@@ -20,6 +20,7 @@ int main()
     }
     // elemek kiírása rekurzívan
     std::cout << "Fában lévő elemek:\n" << d << std::endl;
+    std::cout << "Fában lévő elemek száma: " << d.getRootNode()->countNodes() << std::endl;
     std::cout << "Fában lévő levelek száma: " << d.getRootNode()->countLeafs() << std::endl;
     std::cout << "Fa mélysége: " << d.depth();
     return 0;

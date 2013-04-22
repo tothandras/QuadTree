@@ -1,7 +1,6 @@
 //  Tóth András
 //  QuadTree.hpp
 //  NHF - QuadTree
-//
 
 #include <iostream>
 
@@ -48,7 +47,7 @@ public:
         if (hasData())
             return data;}
     /// @return - Melyik szinten van?
-    unsigned int getLevel(){return level;}
+    unsigned int getLevel() const{return level;}
     /// Gyerekek törlése úgy, hogy a gyerekek gyerekei is törlődnek.
     void deleteChildren(){
         if (*this==NULL)
@@ -85,9 +84,9 @@ public:
     }
     /// Fában/részfában lévő elemek megszámolása rekurzív függvényhívással.
     /// @return - Fa/részfa elemszáma
-    unsigned int countElements() const{
+    unsigned int countNodes() const{
         if (this==NULL) return 0;
-        return children[0]->countElements()+children[1]->countElements()+children[2]->countElements()+children[3]->countElements()+ 1;
+        return children[0]->countNodes()+children[1]->countNodes()+children[2]->countNodes()+children[3]->countNodes()+ 1;
     }
     /// Fában/részfában lévő levelek megszámolása rekurzív függvényhívással.
     /// @return - Fa/részfa levélszáma
@@ -134,7 +133,7 @@ public:
             else{
                 size_t i;
                 for(i=0; i<4; ++i)
-                    elements[i]=temp->children[i]->countElements();
+                    elements[i]=temp->children[i]->countNodes();
                 min=elements[0];
                 for(i=0; i<4; ++i)
                     if(min>elements[i])
@@ -191,10 +190,11 @@ template <typename T>
 std::ostream& operator<<(std::ostream & os, const QuadTreeNode<T> & Node){
     if (&Node==NULL)
         return os;
+    for (unsigned int i=Node.getLevel(); i!=0; --i) os << "  ";
     for (size_t i=0; i<4; ++i){
         os << *Node.children[i];
-        if (Node.children[i]!=NULL && !Node.isLeaf()) os << ", ";
+        //if (Node.children[i]!=NULL && !Node.isLeaf()) os << "\t";
     }
-    os << Node.data;
+    os << Node.data << std::endl;
     return os;
 }
