@@ -190,11 +190,11 @@ template <typename T>
 std::ostream& operator<<(std::ostream & os, const QuadTreeNode<T> & Node){
     if (&Node==NULL)
         return os;
-    for (unsigned int i=Node.getLevel(); i!=0; --i) os << "  ";
     for (size_t i=0; i<4; ++i){
         os << *Node.children[i];
         //if (Node.children[i]!=NULL && !Node.isLeaf()) os << "\t";
     }
+    for (unsigned int i=Node.getLevel(); i!=0; --i) os << "  ";
     os << Node.data << std::endl;
     return os;
 }
