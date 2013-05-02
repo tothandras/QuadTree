@@ -16,9 +16,9 @@ int main()
     d.insert(9234);
     d.insert(5084);
     for (size_t i=0; i<16; ++i) {
-        d.insert(i);
+        d.insert(i+48);
     }
-    // elemek kiírása rekurzívan
+    // elemek kiírása
     std::cout << "Fában lévő elemek:\n" << d << std::endl;
     std::cout << "Fában lévő elemek száma: " << d.getRootNode()->countNodes() << std::endl;
     std::cout << "Fában lévő levelek száma: " << d.getRootNode()->countLeafs() << std::endl;

@@ -149,8 +149,13 @@ public:
     
     /// Fa iterátor.
     class iterator;
-    iterator begin(){}
-    iterator end(){}
+    iterator begin() const{
+        QuadTreeNode<T> *temp=root;
+        while (!temp->isLeaf())
+            temp=temp->children[0];
+        return iterator(temp);
+    }
+    iterator end() const{return iterator(NULL);}
     
     friend class QuadTreeNode<T>;
     friend std::ostream& operator<< <T>(std::ostream &,const QuadTree<T> &);
@@ -161,13 +166,35 @@ template <class T>
 class QuadTree<T>::iterator{
 protected:
     QuadTreeNode<T> *Node;
-    iterator(QuadTreeNode<T> *Node=NULL): Node(Node){}
 public:
+    iterator(QuadTreeNode<T> *Node=NULL): Node(Node){}
+    iterator& operator=(QuadTreeNode<T> r){
+      return this->Node=r.Node;
+    }
     QuadTreeNode<T>& operator*(){return *Node;}
     QuadTreeNode<T>* operator&(){return Node;}
     QuadTreeNode<T>* operator->(){return Node;}
-    iterator& operator++(){}
-    iterator operator++(int){}
+    iterator& operator++(){
+        size_t i=0;
+        if (Node->parent==NULL){
+            Node=Node->parent;
+            return *this;
+        }
+        while (Node!=Node->parent->children[i])
+            ++i;
+        if (i<3 && Node->parent->children[i+1]->isLeaf())
+            Node=Node->parent->children[i+1];
+        else if (i<3){
+            QuadTreeNode<T> *temp=Node->parent->children[i+1];
+            while(!temp->isLeaf())
+                temp=temp->children[0];
+            Node=temp;
+        }
+        else
+            Node=Node->parent;
+        return *this;
+    }
+    iterator operator++(int){return ++(*this);}
     bool operator==(const iterator& iter){
         return Node==iter.Node;
     }
@@ -178,23 +205,23 @@ public:
 
 /// Fa kiírása rekurzívan.
 template <typename T>
-std::ostream& operator<<(std::ostream & os, const QuadTree<T> & QuadTree){
-    if (QuadTree.root==NULL)
+std::ostream& operator<<(std::ostream & os, const QuadTree<T> & quadtree){
+    if (quadtree.root==NULL)
         return os;
-    os << *QuadTree.root;
+    typename QuadTree<T>::iterator iter=quadtree.begin();
+    while (iter!=quadtree.end()) os<< *(iter++);
     return os;
 }
 
 /// Részfa kiírása rekurzívan
 template <typename T>
-std::ostream& operator<<(std::ostream & os, const QuadTreeNode<T> & Node){
-    if (&Node==NULL)
+std::ostream& operator<<(std::ostream & os, const QuadTreeNode<T> & node){
+    if (&node==NULL)
         return os;
-    for (size_t i=0; i<4; ++i){
+    for (unsigned int i=node.getLevel(); i!=0; --i) os << ' ';
+    os << node.data << std::endl;
+    /*for (size_t i=0; i<4; ++i){
         os << *Node.children[i];
-        //if (Node.children[i]!=NULL && !Node.isLeaf()) os << "\t";
-    }
-    for (unsigned int i=Node.getLevel(); i!=0; --i) os << "  ";
-    os << Node.data << std::endl;
+    }*/
     return os;
 }
