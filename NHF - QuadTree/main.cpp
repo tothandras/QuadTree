@@ -6,6 +6,7 @@
 
 #include <iostream>
 #include "QuadTree.hpp"
+//#include "Object.hpp"
 
 int main()
 {
@@ -23,5 +24,7 @@ int main()
     std::cout << "Fában lévő elemek száma: " << d.getRootNode()->countNodes() << std::endl;
     std::cout << "Fában lévő levelek száma: " << d.getRootNode()->countLeafs() << std::endl;
     std::cout << "Fa mélysége: " << d.depth();
+    
+    QuadTree<Point> o(Point (1, 2));
     return 0;
 }

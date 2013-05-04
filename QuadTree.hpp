@@ -1,8 +1,12 @@
-//  Tóth András
-//  QuadTree.hpp
-//  NHF - QuadTree
+///  Tóth András (O8POUA)
+///  NHF 2013 - QuadTree
+/// 25. sor QuadTreeNode
+/// 109. sor QuadTree
+/// 170. sor QuadTree::iterator
+///
 
 #include <iostream>
+#include "Object.hpp"
 
 template <typename T>
 class QuadTree;
@@ -41,11 +45,13 @@ class QuadTreeNode{
     }
 public:
     /// @return - A csomópont rendelkezik-e adattal?
-    bool hasData(){return hasdata;}
+    bool hasData() const{return hasdata;}
     /// @return - Adat
-    T& getData(){
+    T getData() const{
         if (hasData())
-            return data;}
+            return data;
+        else throw "This node has no data.";
+    }
     /// @return - Melyik szinten van?
     unsigned int getLevel() const{return level;}
     /// Gyerekek törlése úgy, hogy a gyerekek gyerekei is törlődnek.
@@ -149,61 +155,71 @@ public:
     
     /// Fa iterátor.
     class iterator;
+    /// @return - Legbaloldalibb levél.
     iterator begin() const{
         QuadTreeNode<T> *temp=root;
         while (!temp->isLeaf())
             temp=temp->children[0];
         return iterator(temp);
     }
+    /// @return - Az utolsó elem után mutat.
     iterator end() const{return iterator(NULL);}
     
     friend class QuadTreeNode<T>;
     friend std::ostream& operator<< <T>(std::ostream &,const QuadTree<T> &);
 };
 
-/* Munka alatt */
 template <class T>
 class QuadTree<T>::iterator{
 protected:
     QuadTreeNode<T> *Node;
 public:
+    /// Konstruktor
     iterator(QuadTreeNode<T> *Node=NULL): Node(Node){}
-    iterator& operator=(QuadTreeNode<T> r){
-      return this->Node=r.Node;
-    }
     QuadTreeNode<T>& operator*(){return *Node;}
     QuadTreeNode<T>* operator&(){return Node;}
     QuadTreeNode<T>* operator->(){return Node;}
+    /// Preinkrement operátor???
+    /// @return - Következő elem 
     iterator& operator++(){
         size_t i=0;
+        /// Ha a gyökér elemnél vagyunk (csak annak nincs szülője), akkor végigértünk az összes elemen.
         if (Node->parent==NULL){
             Node=Node->parent;
             return *this;
         }
+        /// A szülő hányadig gyerekén állunk?
         while (Node!=Node->parent->children[i])
             ++i;
+        /// Ha a következő gyerek levél, akkor ez lesz a következő elem.
         if (i<3 && Node->parent->children[i+1]->isLeaf())
             Node=Node->parent->children[i+1];
+        /// Ha a következő gyerek nem levél, akkor a következő elem a legbaloldalibb levél a következő gyerek alatt.
         else if (i<3){
             QuadTreeNode<T> *temp=Node->parent->children[i+1];
             while(!temp->isLeaf())
                 temp=temp->children[0];
             Node=temp;
         }
+        /// Egyébként a szülő a következő elem.
         else
             Node=Node->parent;
         return *this;
     }
+    /// @return - Következő elem.
     iterator operator++(int){return ++(*this);}
+    /// Egyenlőség operátor
+    /// @return - Igaz, ha megegyezik az csomópont.
     bool operator==(const iterator& iter){
         return Node==iter.Node;
     }
+    /// @return - Igaz, ha nem egyezik meg a csomópont.
     bool operator!=(const iterator& iter){
         return Node!=iter.Node;
     }
 };
 
-/// Fa kiírása rekurzívan.
+/// Fa kiírása iterátor használatával.
 template <typename T>
 std::ostream& operator<<(std::ostream & os, const QuadTree<T> & quadtree){
     if (quadtree.root==NULL)
@@ -213,7 +229,7 @@ std::ostream& operator<<(std::ostream & os, const QuadTree<T> & quadtree){
     return os;
 }
 
-/// Részfa kiírása rekurzívan
+/// Csomópont kiírása.
 template <typename T>
 std::ostream& operator<<(std::ostream & os, const QuadTreeNode<T> & node){
     if (&node==NULL)
