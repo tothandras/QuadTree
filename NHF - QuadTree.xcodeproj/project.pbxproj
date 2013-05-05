@@ -29,7 +29,6 @@
 		0D31FB8C17186FBB00499F11 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		0D31FB8E17186FBB00499F11 /* NHF___QuadTree.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = "NHF___QuadTree.1"; sourceTree = "<group>"; };
 		0D31FB991718700700499F11 /* QuadTree.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = QuadTree.hpp; sourceTree = "<group>"; };
-		0DEBAD221732BC7B00238733 /* Object.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Object.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,7 +46,6 @@
 			isa = PBXGroup;
 			children = (
 				0D31FB991718700700499F11 /* QuadTree.hpp */,
-				0DEBAD221732BC7B00238733 /* Object.hpp */,
 				0D31FB8B17186FBB00499F11 /* NHF - QuadTree */,
 				0D31FB8A17186FBB00499F11 /* Products */,
 			);
