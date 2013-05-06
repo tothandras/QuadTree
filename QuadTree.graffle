@@ -1465,8 +1465,8 @@
 			<integer>35</integer>
 			<key>Points</key>
 			<array>
-				<string>{103.54521033388293, 149.33757830865014}</string>
-				<string>{259.64720681089244, 79.182105529240474}</string>
+				<string>{103.54521033388293, 149.33757830865017}</string>
+				<string>{259.6472068108925, 79.182105529240445}</string>
 			</array>
 			<key>Style</key>
 			<dict>
@@ -1729,7 +1729,7 @@
 	<key>MasterSheets</key>
 	<array/>
 	<key>ModificationDate</key>
-	<string>2013-05-02 15:36:39 +0000</string>
+	<string>2013-05-06 06:51:01 +0000</string>
 	<key>Modifier</key>
 	<string>Tóth András</string>
 	<key>NotesVisible</key>

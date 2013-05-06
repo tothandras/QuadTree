@@ -17,11 +17,11 @@ std::ostream& operator<<(std::ostream &,const QuadTreeNode<T> &);
 
 template <class T>
 class Point{
-    unsigned int x, y;
+    double x, y;
     T data;
 public:
     Point(): x(0), y(0) {}
-    Point(T data, unsigned int x=0, unsigned int y=0): data(data), x(x), y(y) {}
+    Point(T data, double x=0, double y=0): data(data), x(x), y(y) {}
     friend class QuadTree<T>;
     friend class QuadTreeNode<T>;
 };
@@ -35,17 +35,19 @@ class QuadTreeNode{
     /// Adat.
     Point<T> data;
     /// 
-    unsigned int x, y, width, height;
+    double x, y, width, height;
     /// Van-e adattagja?
     bool hasdata;
     /// Fában lévő szintje
-    unsigned int level;
+    unsigned level;
+    ///
+    static unsigned MAX_LEVEL;
     /// Nincs paraméter nélküli konstruktora.
     QuadTreeNode();
     /// QuadTree hozhat létre új csomópontot. (Adat nélkül)
-    QuadTreeNode(unsigned int width, unsigned int height, unsigned int x=0, unsigned int y=0, unsigned int level=0, QuadTreeNode *parent=NULL): parent(parent), children{NULL, NULL, NULL, NULL}, hasdata(false), width(width), height(height), x(x), y(y), level(level){}
+    QuadTreeNode(double width, double height, double x=0, double y=0, unsigned level=0, QuadTreeNode *parent=NULL): parent(parent), children{NULL, NULL, NULL, NULL}, hasdata(false), width(width), height(height), x(x), y(y), level(level){}
     /// QuadTree hozhat létre új csomópontot. (Adattal)
-    QuadTreeNode(Point<T> data, unsigned int width, unsigned int height, unsigned int x=0, unsigned int y=0, unsigned int level=0, QuadTreeNode *parent=NULL): parent(parent), children{NULL, NULL, NULL, NULL}, data(data), hasdata(true), width(width), height(height), x(x), y(y), level(level){}
+    QuadTreeNode(Point<T> data, double width, double height, double x=0, double y=0, unsigned level=0, QuadTreeNode *parent=NULL): parent(parent), children{NULL, NULL, NULL, NULL}, data(data), hasdata(true), width(width), height(height), x(x), y(y), level(level){}
     /// Destruktor. (delete NULL; esetén nincs probléma, nem kell vizsgálni)
     ~QuadTreeNode(){
         for (size_t i=0; i<4; ++i)
@@ -61,19 +63,27 @@ class QuadTreeNode{
     }
     /// Adat beszúrása.
     /// @param - Adat
-    void insert(Point<T> data){
-        if (data.x > x+width || data.y > y+height) throw std::out_of_range("");
+    void insert(Point<T> point){
+        if (point.x > x+width || point.y > y+height) throw std::out_of_range("");
         if (!hasData()){
-            this->data=data;
+            this->data=point;
             hasdata=true;
             return;
         }
-        split();
-        size_t i=3;
-        if (data.x < width/2 && data.y > height/2) i=0;
-        else if (data.x > width/2 && data.y > height/2) i=1;
-        else if (data.x > width/2 && data.y < height/2) i=2;
-        children[i]->insert(data);
+        if(level+1 != MAX_LEVEL){
+            split();
+            hasdata=false;
+            size_t i=3;
+            if (data.x < width/2 && data.y > height/2) i=0;
+            else if (data.x > width/2 && data.y > height/2) i=1;
+            else if (data.x > width/2 && data.y < height/2) i=2;
+            children[i]->insert(data);
+            i=3;
+            if (point.x < width/2 && point.y > height/2) i=0;
+            else if (point.x > width/2 && point.y > height/2) i=1;
+            else if (point.x > width/2 && point.y < height/2) i=2;
+            children[i]->insert(point);
+        }
     }
 public:
     /// @return - A csomópont rendelkezik-e adattal?
@@ -85,7 +95,7 @@ public:
         else throw "This node has no data.";
     }
     /// @return - Melyik szinten van?
-    unsigned int getLevel() const{return level;}
+    unsigned getLevel() const{return level;}
     /// Gyerekek törlése úgy, hogy a gyerekek gyerekei is törlődnek.
     void deleteChildren(){
         if (*this==NULL)
@@ -107,17 +117,16 @@ public:
 };
 
 template <class T>
+unsigned QuadTreeNode<T>::MAX_LEVEL=10;
+
+template <class T>
 class QuadTree{
     /// Fa gyökerére mutató pointer.
     QuadTreeNode<T> *root;
 public:
     /// Konstruktor. (Adat nélkül)
-    QuadTree(unsigned int width=100, unsigned int height=100){
+    QuadTree(double width=100, double height=100){
         root = new QuadTreeNode<T>(width, height);
-    }
-    /// Konstruktor. (Adattal)
-    QuadTree(T Data, unsigned int width=100, unsigned int height=100){
-        root = new QuadTreeNode<T>(Point<T>(Data), width, height);
     }
     /// Destruktor.
     ~QuadTree(){delete root;}
@@ -129,8 +138,9 @@ public:
     }
     /// Fa mélységének visszaadása.
     /// @return - Fa mélysége
-    unsigned int depth() const{
-        unsigned int max=1;
+    unsigned depth() const{
+        if (root==NULL) return 0;
+        unsigned max=1;
         for (iterator iter=begin(); iter!=end(); ++iter){
             if (max < (*iter).level+1)
                 max=(*iter).level+1;
@@ -140,9 +150,8 @@ public:
     
     /// Fában lévő elemek megszámolása.
     /// @return - Fa elemszáma
-    unsigned int countNodes() const{
-        if (this==NULL) return 0;
-        unsigned int nodes=0;
+    unsigned countNodes() const{
+        unsigned nodes=0;
         for (iterator iter=begin(); iter!=end(); ++iter) ++nodes;
         return nodes;
     }
