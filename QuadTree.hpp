@@ -70,7 +70,7 @@ class QuadTreeNode{
             hasdata=true;
             return;
         }
-        if(level+1 != MAX_LEVEL){
+        if (level+1 != MAX_LEVEL){
             split();
             hasdata=false;
             size_t i=3;
