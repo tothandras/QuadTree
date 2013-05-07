@@ -1,4 +1,4 @@
-///  Tóth András (O8POUA)
+///  Tóth András (O8POUA) 
 ///  NHF 2013 - QuadTree (Négy elágazású duplán láncolt generikus fa)
 
 template <typename T>
