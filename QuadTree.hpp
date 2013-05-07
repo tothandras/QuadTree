@@ -2,10 +2,16 @@
 ///  NHF 2013 - QuadTree (Négy elágazású duplán láncolt generikus fa)
 
 template <typename T>
+class Point;
+
+template <typename T>
 class QuadTree;
 
 template <typename T>
 class QuadTreeNode;
+
+template <typename T>
+std::ostream& operator<<(std::ostream &,const Point<T> &);
 
 template <typename T>
 std::ostream& operator<<(std::ostream &,const QuadTree<T> &);
@@ -28,6 +34,7 @@ public:
     
     friend class QuadTree<T>;
     friend class QuadTreeNode<T>;
+    friend std::ostream& operator<< <T>(std::ostream &, const Point &);
 };
 
 /// QuadTreeNode (négy elágazású generikus fa csomópontja) osztály. A négy elágazású generikus fa ilyen csomópontokból épül fel.
@@ -149,20 +156,7 @@ public:
     QuadTreeNode<T>* getRootNode(){return root;}
     /// Új elem beszúrása.
     /// @param Új pont / adat.
-    void insert(Point<T> data){
-        /// Ha a pont kívül esik a területről, akkor kivételt dob.
-        if (data.x > root->x+root->width || data.y > root->y+root->height)
-            throw std::out_of_range("");
-        QuadTreeNode<T> *temp=root;
-        while (!temp->isLeaf()){
-            size_t i=3;
-            if (data.x <= temp->x+temp->width/2 && data.y > temp->y+temp->height/2) i=0;
-            else if (data.x > temp->x+temp->width/2 && data.y >= temp->y+temp->height/2) i=1;
-            else if (data.x > temp->x+temp->width/2 && data.y <= temp->y+temp->height/2) i=2;
-            temp=temp->children[i];
-        }
-        temp->insert(data);
-    }
+    void insert(Point<T> data);
     /// Fa mélységének visszaadása.
     /// @return Fa mélysége.
     unsigned depth() const{
@@ -181,6 +175,21 @@ public:
         unsigned nodes=0;
         for (iterator iter=begin(); iter!=end(); ++iter) ++nodes;
         return nodes;
+    }
+    
+    Point<T> find(Point<T> point) const{
+        for (iterator iter=begin(); iter!=end(); ++iter)
+            for (size_t i=0; i<iter->number_of_points; ++i)
+                if (iter->point[i]==point)
+                    return Point<T>(point.data, iter->point[0].x, iter->point[0].y);
+    }
+    
+    Point<T> find(T data) const{
+        for (iterator iter=begin(); iter!=end(); ++iter)
+            for (size_t i=0; i<iter->number_of_points; ++i)
+                if (iter->point[i].data==data)
+                    return Point<T>(data, iter->point[0].x, iter->point[0].y);
+        throw "Nincs találat.";
     }
     
     /// Fa iterátor.
@@ -249,6 +258,30 @@ public:
     }
 };
 
+template <class T>
+/// Új elem beszúrása.
+/// @param Új pont / adat.
+void QuadTree<T>::insert(Point<T> data){
+    /// Ha a pont kívül esik a területről, akkor kivételt dob.
+    if (data.x > root->x+root->width || data.y > root->y+root->height)
+        throw std::out_of_range("This point can't be inserted.");
+    QuadTreeNode<T> *temp=root;
+    while (!temp->isLeaf()){
+        size_t i=3;
+        if (data.x <= temp->x+temp->width/2 && data.y > temp->y+temp->height/2) i=0;
+        else if (data.x > temp->x+temp->width/2 && data.y >= temp->y+temp->height/2) i=1;
+        else if (data.x > temp->x+temp->width/2 && data.y <= temp->y+temp->height/2) i=2;
+        temp=temp->children[i];
+    }
+    temp->insert(data);
+}
+
+/// Point (pont) kiírása "(x ; y): adat" alakban.
+template <class T>
+std::ostream& operator<<(std::ostream & os, const Point<T> & point){
+    return os << "(" << point.x << ";" << point.y << "): " << point.data << std::endl;
+}
+
 /// Fa kiírása iterátor használatával.
 template <class T>
 std::ostream& operator<<(std::ostream & os, const QuadTree<T> & quadtree){
@@ -268,7 +301,7 @@ std::ostream& operator<<(std::ostream & os, const QuadTreeNode<T> & node){
     if (node.hasData()){
         for (size_t i=0; i<node.number_of_points; ++i){
             for (unsigned i=0; i<node.level; ++i) os << ' ';
-            os << "(" << node.point[i].x << ";" << node.point[i].y << "): " << node.point[i].data << std::endl;
+            os << node.point[i];
         }
     }
     return os;
