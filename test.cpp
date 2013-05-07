@@ -4,7 +4,6 @@
 
 
 #include <iostream>
-//#include "QuadTreeIterator.hpp"
 #include "QuadTree.hpp"
 
 int main()
