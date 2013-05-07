@@ -37,8 +37,9 @@ int main()
     
     /// Keresés a fában.
     try {
-        std::cout << doubleTree.find(23);
-        std::cout << doubleTree.find(888);
+        doubleTree.find(Point<double>(66, 6, 6)).getData()=11;
+        std::cout << doubleTree.find(11);
+        std::cout << doubleTree.find(66);
     } catch (const char* c) {
         std::cout << c;
     }

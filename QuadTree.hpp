@@ -31,7 +31,15 @@ public:
     Point(): x(0), y(0) {}
     /// Konstruktor adattal.
     Point(T data, double x=0, double y=0): data(data), x(x), y(y) {}
-    
+    bool operator==(Point & point){
+        return (x==point.x && y==point.y && data==point.data);
+    }
+    bool operator!=(Point & point){
+        return !((*this) == point);
+    }
+    T& getData(){
+        return data;
+    }
     friend class QuadTree<T>;
     friend class QuadTreeNode<T>;
     friend std::ostream& operator<< <T>(std::ostream &, const Point &);
@@ -177,19 +185,26 @@ public:
         return nodes;
     }
     
-    Point<T> find(Point<T> point) const{
-        for (iterator iter=begin(); iter!=end(); ++iter)
-            for (size_t i=0; i<iter->number_of_points; ++i)
-                if (iter->point[i]==point)
-                    return Point<T>(point.data, iter->point[0].x, iter->point[0].y);
+    Point<T>& find(Point<T> point){
+        QuadTreeNode<T> *temp=root;
+        while (!temp->isLeaf()){
+            size_t i=3;
+            if (point.x <= temp->x+temp->width/2 && point.y > temp->y+temp->height/2) i=0;
+            else if (point.x > temp->x+temp->width/2 && point.y >= temp->y+temp->height/2) i=1;
+            else if (point.x > temp->x+temp->width/2 && point.y <= temp->y+temp->height/2) i=2;
+            temp=temp->children[i];
+        }
+        for (size_t i=0; i<temp->number_of_points; ++i)
+            if (point==temp->point[i]) return temp->point[i];
+        throw "Point not found";
     }
     
-    Point<T> find(T data) const{
+    Point<T> find(T data){
         for (iterator iter=begin(); iter!=end(); ++iter)
             for (size_t i=0; i<iter->number_of_points; ++i)
                 if (iter->point[i].data==data)
                     return Point<T>(data, iter->point[0].x, iter->point[0].y);
-        throw "Nincs találat.";
+        throw "Point not found";
     }
     
     /// Fa iterátor.
@@ -261,19 +276,19 @@ public:
 template <class T>
 /// Új elem beszúrása.
 /// @param Új pont / adat.
-void QuadTree<T>::insert(Point<T> data){
+void QuadTree<T>::insert(Point<T> point){
     /// Ha a pont kívül esik a területről, akkor kivételt dob.
-    if (data.x > root->x+root->width || data.y > root->y+root->height)
+    if (point.x > root->x+root->width || point.y > root->y+root->height)
         throw std::out_of_range("This point can't be inserted.");
     QuadTreeNode<T> *temp=root;
     while (!temp->isLeaf()){
         size_t i=3;
-        if (data.x <= temp->x+temp->width/2 && data.y > temp->y+temp->height/2) i=0;
-        else if (data.x > temp->x+temp->width/2 && data.y >= temp->y+temp->height/2) i=1;
-        else if (data.x > temp->x+temp->width/2 && data.y <= temp->y+temp->height/2) i=2;
+        if (point.x <= temp->x+temp->width/2 && point.y > temp->y+temp->height/2) i=0;
+        else if (point.x > temp->x+temp->width/2 && point.y >= temp->y+temp->height/2) i=1;
+        else if (point.x > temp->x+temp->width/2 && point.y <= temp->y+temp->height/2) i=2;
         temp=temp->children[i];
     }
-    temp->insert(data);
+    temp->insert(point);
 }
 
 /// Point (pont) kiírása "(x ; y): adat" alakban.
