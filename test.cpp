@@ -24,14 +24,14 @@ int main()
     /// Elemek kiírása.
     std::cout << "Fában lévő elemek:\n" << doubleTree << std::endl;
     /// Fa mélységének kiírása.
-    std::cout << "Fa mélysége: " << doubleTree.depth() << std::endl;
+    std::cout << "Fa mélysége: " << doubleTree.depth() << std::endl << std::endl;
     
     /// Hibakezelés vizsgálata.
     std::cout << "Hibakezelés vizsgálata:" << std::endl;
     try {
         doubleTree.insert(Point<double>(100, 11, 5));
-    } catch (std::exception& e) {
-        std::cout << e.what() << std::endl;
+    } catch (const char* c) {
+        std::cout << c << std::endl;
     }
     
     /// Keresés a fában.
