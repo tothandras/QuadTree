@@ -141,9 +141,9 @@ void QuadTreeNode<T>::insert(Point<T> new_point){
         split();
         /// Beszúrjuk a meglévő adatot.
         size_t i=3;
-        if (x <= x+width/2 && y > y+height/2) i=0;
-        else if (x > x+width/2 && y >= y+height/2) i=1;
-        else if (x > x+width/2 && y <= y+height/2) i=2;
+        if (point->x <= x+width/2 && point->y > y+height/2) i=0;
+        else if (point->x > x+width/2 && point->y >= y+height/2) i=1;
+        else if (point->x > x+width/2 && point->y <= y+height/2) i=2;
         children[i]->insert(*point);
         delete[] point;
         point=NULL;
@@ -219,7 +219,23 @@ public:
     iterator end() const{return iterator(NULL);}
     
     friend class QuadTreeNode<T>;
-    friend std::ostream& operator<< <T>(std::ostream &,const QuadTree<T> &);
+    friend std::ostream& operator<< <T>(std::ostream &, const QuadTree<T> &);
+    friend std::istream& operator>>(std::istream& is, QuadTree<T> & quadtree){
+        double x, y;
+        T data;
+        while(is.good()){
+            is.ignore(512, '(');
+            is >> x;
+            is.ignore(256, ';');
+            is >> y;
+            is.ignore(256, ')');
+            is.ignore(256, ':');
+            is >> data;
+            is.ignore(256, '\n');
+            quadtree.insert(Point<T>(data, x, y));
+        }
+        return is;
+        }
 };
 
 /// Fa mélységének visszaadása.
@@ -336,7 +352,7 @@ public:
 /// Point (pont) kiírása "(x ; y): adat" alakban.
 template <class T>
 std::ostream& operator<<(std::ostream & os, const Point<T> & point){
-    return os << "(" << point.x << ";" << point.y << "): " << point.data << std::endl;
+    return os << '(' << point.x << ';' << point.y << ')' << ':' << ' ' << point.data << std::endl;
 }
 
 /// Fa kiírása iterátor használatával.
@@ -363,3 +379,18 @@ std::ostream& operator<<(std::ostream & os, const QuadTreeNode<T> & node){
     }
     return os;
 }
+
+/// Beolvasás.
+/*
+template <class T>
+std::istream& operator>>(std::istream& is,const QuadTree<T> & quadtree){
+    double x, y;
+    T data;
+    while (!is.eof()) {
+        is >> x >> y;
+        is.seekg(3, is.cur);
+        is >> data;
+        quadtree.instert(Point<T>(data, x, y));
+    }
+    return is;
+}*/

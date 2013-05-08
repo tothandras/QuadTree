@@ -4,6 +4,8 @@
 
 
 #include <iostream>
+#include <fstream>
+#include <string>
 #include "QuadTree.hpp"
 
 int main()
@@ -19,29 +21,41 @@ int main()
     doubleTree.insert(Point<double>(88, 8, 8));
     /// Beszúrás olyan helyre, ahol már található meglévő adat.
     for (size_t i=0; i<5; ++i) {
-        doubleTree.insert(Point<double>(i, 8, 8.0));
+        doubleTree.insert(Point<double>(i, 9, 9));
     }
     /// Elemek kiírása.
-    std::cout << "Fában lévő elemek:\n" << doubleTree << std::endl;
+    std::cout << "Double-t tartalmazó fában lévő elemek:\n" << doubleTree << std::endl;
     /// Fa mélységének kiírása.
     std::cout << "Fa mélysége: " << doubleTree.depth() << std::endl << std::endl;
     
     /// Hibakezelés vizsgálata.
-    std::cout << "Hibakezelés vizsgálata:" << std::endl;
+    std::cout << "Kivételek kezelésének vizsgálata:" << std::endl;
     try {
-        doubleTree.insert(Point<double>(100, 11, 5));
+        doubleTree.insert(Point<double>(100, 11, 5)); // Külső pont nem szúrható be.
     } catch (const char* c) {
         std::cout << c << std::endl;
     }
     
     /// Keresés a fában.
     try {
-        doubleTree.find(Point<double>(66, 6, 6)).getData()=11;
-        std::cout << doubleTree.find(11);
-        std::cout << doubleTree.find(66);
+        doubleTree.find(Point<double>(66, 6, 6)).getData()=11; // Pont megkeresése, tárolt adat átírása.
+        std::cout << doubleTree.find(11); // Sikerült átírni.
+        std::cout << doubleTree.find(66); // Már nincs ilyen pont.
     } catch (const char* c) {
-        std::cout << c;
+        std::cout << c << std::endl;
     }
     
+    /// Fájlból beolvasás.
+    QuadTree<char> charTree(10, 10);
+    try {
+        std::fstream File;
+        File.open("/Users/tothandras/Dropbox/Mernokinformatika/Szoftlab2/Szoftlab2NHFquadtree/NHFQuadTree/input.dat");
+        File >> charTree;
+        File.close();
+    } catch (std::exception& e) {
+        std::cout << e.what() << std::endl;
+    }
+    std::cout << std::endl << "Char-t tartalmazó fában lévő elemek:"  << std::endl << charTree;
+     
     return 0;
 }
