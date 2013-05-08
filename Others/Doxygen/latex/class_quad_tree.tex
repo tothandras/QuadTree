@@ -1,0 +1,218 @@
+\hypertarget{class_quad_tree}{\section{Quad\-Tree$<$ T $>$ osztálysablon-\/referencia}
+\label{class_quad_tree}\index{Quad\-Tree$<$ T $>$@{Quad\-Tree$<$ T $>$}}
+}
+
+
+\hyperlink{class_quad_tree}{Quad\-Tree} (négy elágazású generikus fa) osztály. A négy elágazású generikus fa Quad\-Tree\-Node-\/okból épül fel.  
+
+
+
+
+{\ttfamily \#include $<$Quad\-Tree.\-hpp$>$}
+
+\subsection*{Osztályok}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{class_quad_tree_1_1iterator}{iterator}
+\begin{DoxyCompactList}\small\item\em Iterátor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Publikus tagfüggvények}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_quad_tree_ace31f8c41daaae0cb39e05bcd5a17c8d}{\hyperlink{class_quad_tree_ace31f8c41daaae0cb39e05bcd5a17c8d}{Quad\-Tree} (double width=100, double height=100)}\label{class_quad_tree_ace31f8c41daaae0cb39e05bcd5a17c8d}
+
+\begin{DoxyCompactList}\small\item\em Konstruktor. \end{DoxyCompactList}\item 
+\hypertarget{class_quad_tree_a6a4f976ec4e7c4c14315159073e96ddb}{\hyperlink{class_quad_tree_a6a4f976ec4e7c4c14315159073e96ddb}{$\sim$\-Quad\-Tree} ()}\label{class_quad_tree_a6a4f976ec4e7c4c14315159073e96ddb}
+
+\begin{DoxyCompactList}\small\item\em Destruktor. \end{DoxyCompactList}\item 
+\hyperlink{class_quad_tree_node}{Quad\-Tree\-Node}$<$ T $>$ $\ast$ \hyperlink{class_quad_tree_abf1956b116f33bbb16a4f6371794162c}{get\-Root\-Node} ()
+\item 
+void \hyperlink{class_quad_tree_aafef2e05b7f4bd731634574ac3bcdccc}{insert} (\hyperlink{class_point}{Point}$<$ T $>$ data)
+\begin{DoxyCompactList}\small\item\em Új elem beszúrása. \end{DoxyCompactList}\item 
+unsigned \hyperlink{class_quad_tree_abe41bcda41ff875907e632226bf4d244}{depth} () const 
+\begin{DoxyCompactList}\small\item\em Fa mélységének visszaadása. \end{DoxyCompactList}\item 
+unsigned \hyperlink{class_quad_tree_acf2697f69e5b6113d2deeb08f8022e40}{count\-Nodes} () const 
+\begin{DoxyCompactList}\small\item\em Fában lévő elemek megszámolása. \end{DoxyCompactList}\item 
+\hyperlink{class_point}{Point}$<$ T $>$ \& \hyperlink{class_quad_tree_a3f33d10445c05d2a45e472e800bf4207}{find} (\hyperlink{class_point}{Point}$<$ T $>$ point)
+\begin{DoxyCompactList}\small\item\em Adott pont megkeresése. Lehetőség van az adott pontban lévő adat megváltoztatására. \end{DoxyCompactList}\item 
+\hyperlink{class_point}{Point}$<$ T $>$ \& \hyperlink{class_quad_tree_a66d20874421d3736d491d2280ca0da65}{find} (T data)
+\begin{DoxyCompactList}\small\item\em Adott adatot tároló pont megkeresése. Lehetőség van az adott pontban lévő adat megváltoztatására. \end{DoxyCompactList}\item 
+\hyperlink{class_quad_tree_1_1iterator}{iterator} \hyperlink{class_quad_tree_a702aaf964efe9b2858dc223b7b810e13}{begin} () const 
+\item 
+\hyperlink{class_quad_tree_1_1iterator}{iterator} \hyperlink{class_quad_tree_aabea79664dba5f52adef8e977d5e3ffa}{end} () const 
+\end{DoxyCompactItemize}
+\subsection*{Barátok}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_quad_tree_ac17a5caf43217c772028859f0dd9036e}{class {\bfseries Quad\-Tree\-Node$<$ T $>$}}\label{class_quad_tree_ac17a5caf43217c772028859f0dd9036e}
+
+\item 
+\hypertarget{class_quad_tree_a1064006fe4acbdff14ffa84b3a22e774}{std\-::ostream \& {\bfseries operator} (std\-::ostream \&, const \hyperlink{class_quad_tree}{Quad\-Tree}$<$ T $>$ \&)}\label{class_quad_tree_a1064006fe4acbdff14ffa84b3a22e774}
+
+\item 
+\hypertarget{class_quad_tree_a60cfb0948b744f2d7ba51d75ad8f28ea}{std\-::istream \& {\bfseries operator$>$$>$} (std\-::istream \&is, \hyperlink{class_quad_tree}{Quad\-Tree}$<$ T $>$ \&quadtree)}\label{class_quad_tree_a60cfb0948b744f2d7ba51d75ad8f28ea}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Részletes leírás}
+\subsubsection*{template$<$class T$>$class Quad\-Tree$<$ T $>$}
+
+\hyperlink{class_quad_tree}{Quad\-Tree} (négy elágazású generikus fa) osztály. A négy elágazású generikus fa Quad\-Tree\-Node-\/okból épül fel. 
+
+\subsection{Tagfüggvények dokumentációja}
+\hypertarget{class_quad_tree_a702aaf964efe9b2858dc223b7b810e13}{\index{Quad\-Tree@{Quad\-Tree}!begin@{begin}}
+\index{begin@{begin}!QuadTree@{Quad\-Tree}}
+\subsubsection[{begin}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf iterator} {\bf Quad\-Tree}$<$ T $>$\-::begin (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_quad_tree_a702aaf964efe9b2858dc223b7b810e13}
+\begin{DoxyReturn}{Visszatérési érték}
+-\/ Legbaloldalibb levél. 
+\end{DoxyReturn}
+
+
+A függvény hívási gráfja\-:
+
+
+
+
+Here is the caller graph for this function\-:
+
+
+\hypertarget{class_quad_tree_acf2697f69e5b6113d2deeb08f8022e40}{\index{Quad\-Tree@{Quad\-Tree}!count\-Nodes@{count\-Nodes}}
+\index{count\-Nodes@{count\-Nodes}!QuadTree@{Quad\-Tree}}
+\subsubsection[{count\-Nodes}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ unsigned {\bf Quad\-Tree}$<$ T $>$\-::count\-Nodes (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_quad_tree_acf2697f69e5b6113d2deeb08f8022e40}
+
+
+Fában lévő elemek megszámolása. 
+
+\begin{DoxyReturn}{Visszatérési érték}
+Fa elemszáma. 
+\end{DoxyReturn}
+
+
+A függvény hívási gráfja\-:
+
+
+\hypertarget{class_quad_tree_abe41bcda41ff875907e632226bf4d244}{\index{Quad\-Tree@{Quad\-Tree}!depth@{depth}}
+\index{depth@{depth}!QuadTree@{Quad\-Tree}}
+\subsubsection[{depth}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T $>$ unsigned {\bf Quad\-Tree}$<$ T $>$\-::depth (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{class_quad_tree_abe41bcda41ff875907e632226bf4d244}
+
+
+Fa mélységének visszaadása. 
+
+\begin{DoxyReturn}{Visszatérési érték}
+Fa mélysége. 
+\end{DoxyReturn}
+\hypertarget{class_quad_tree_aabea79664dba5f52adef8e977d5e3ffa}{\index{Quad\-Tree@{Quad\-Tree}!end@{end}}
+\index{end@{end}!QuadTree@{Quad\-Tree}}
+\subsubsection[{end}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf iterator} {\bf Quad\-Tree}$<$ T $>$\-::end (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_quad_tree_aabea79664dba5f52adef8e977d5e3ffa}
+\begin{DoxyReturn}{Visszatérési érték}
+Az utolsó elem után mutat. 
+\end{DoxyReturn}
+
+
+Here is the caller graph for this function\-:
+
+
+\hypertarget{class_quad_tree_a3f33d10445c05d2a45e472e800bf4207}{\index{Quad\-Tree@{Quad\-Tree}!find@{find}}
+\index{find@{find}!QuadTree@{Quad\-Tree}}
+\subsubsection[{find}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T $>$ {\bf Point}$<$ T $>$ \& {\bf Quad\-Tree}$<$ T $>$\-::find (
+\begin{DoxyParamCaption}
+\item[{{\bf Point}$<$ T $>$}]{point}
+\end{DoxyParamCaption}
+)}}\label{class_quad_tree_a3f33d10445c05d2a45e472e800bf4207}
+
+
+Adott pont megkeresése. Lehetőség van az adott pontban lévő adat megváltoztatására. 
+
+
+\begin{DoxyParams}{Paraméterek}
+{\em Pont,melyet} & keresünk. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Visszatérési érték}
+A keresett pont. 
+\end{DoxyReturn}
+
+
+A függvény hívási gráfja\-:
+
+
+\hypertarget{class_quad_tree_a66d20874421d3736d491d2280ca0da65}{\index{Quad\-Tree@{Quad\-Tree}!find@{find}}
+\index{find@{find}!QuadTree@{Quad\-Tree}}
+\subsubsection[{find}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T $>$ {\bf Point}$<$ T $>$ \& {\bf Quad\-Tree}$<$ T $>$\-::find (
+\begin{DoxyParamCaption}
+\item[{T}]{data}
+\end{DoxyParamCaption}
+)}}\label{class_quad_tree_a66d20874421d3736d491d2280ca0da65}
+
+
+Adott adatot tároló pont megkeresése. Lehetőség van az adott pontban lévő adat megváltoztatására. 
+
+
+\begin{DoxyParams}{Paraméterek}
+{\em Adat,melyet} & keresünk. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Visszatérési érték}
+Az első olyan pont, amely ezt az adatot tartalmazza. 
+\end{DoxyReturn}
+
+
+A függvény hívási gráfja\-:
+
+
+\hypertarget{class_quad_tree_abf1956b116f33bbb16a4f6371794162c}{\index{Quad\-Tree@{Quad\-Tree}!get\-Root\-Node@{get\-Root\-Node}}
+\index{get\-Root\-Node@{get\-Root\-Node}!QuadTree@{Quad\-Tree}}
+\subsubsection[{get\-Root\-Node}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ {\bf Quad\-Tree\-Node}$<$T$>$$\ast$ {\bf Quad\-Tree}$<$ T $>$\-::get\-Root\-Node (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_quad_tree_abf1956b116f33bbb16a4f6371794162c}
+\begin{DoxyReturn}{Visszatérési érték}
+-\/ Gyökérre mutató pointer. 
+\end{DoxyReturn}
+\hypertarget{class_quad_tree_aafef2e05b7f4bd731634574ac3bcdccc}{\index{Quad\-Tree@{Quad\-Tree}!insert@{insert}}
+\index{insert@{insert}!QuadTree@{Quad\-Tree}}
+\subsubsection[{insert}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T $>$ void {\bf Quad\-Tree}$<$ T $>$\-::insert (
+\begin{DoxyParamCaption}
+\item[{{\bf Point}$<$ T $>$}]{point}
+\end{DoxyParamCaption}
+)}}\label{class_quad_tree_aafef2e05b7f4bd731634574ac3bcdccc}
+
+
+Új elem beszúrása. 
+
+
+\begin{DoxyParams}{Paraméterek}
+{\em Új} & pont / adat. \\
+\hline
+\end{DoxyParams}
+Ha a pont kívül esik a területről, akkor kivételt dob.
+
+Egyébként keressük meg azt a levelet ahova be kéne szúrni az új elemet.
+
+Szúrjuk be az elemet. 
+
+A függvény hívási gráfja\-:
+
+
+
+
+Ez a dokumentáció az osztályról a következő fájl alapján készült\-:\begin{DoxyCompactItemize}
+\item 
+/\-Users/tothandras/\-Dropbox/\-Mernokinformatika/\-Szoftlab2/\-Szoftlab2\-N\-H\-Fquadtree/\-N\-H\-F\-Quad\-Tree/Quad\-Tree.\-hpp\end{DoxyCompactItemize}

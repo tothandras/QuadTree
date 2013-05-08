@@ -1,13 +1,12 @@
-///  Tóth András (O8POUA)
+///!  Tóth András (O8POUA)
 ///  NHF 2013 - QuadTree (Négy elágazású duplán láncolt generikus fa)
 ///  Tesztprogram
 
 /// Input fájlt:
-#define input "/Users/tothandras/Dropbox/Mernokinformatika/Szoftlab2/Szoftlab2NHFquadtree/NHFQuadTree/input.dat"
+#define input "input.dat"
 
 #include <iostream>
 #include <fstream>
-#include <string>
 #include "QuadTree.hpp"
 
 int main()
@@ -31,7 +30,7 @@ int main()
     std::cout << "Fa mélysége: " << doubleTree.depth() << std::endl << std::endl;
     
     /// Hibakezelés vizsgálata.
-    std::cout << "Kivételek kezelésének vizsgálata:" << std::endl;
+    std::cout << "Kivételek kezelésének vizsgálata:\n";
     try {
         doubleTree.insert(Point<double>(100, 11, 5)); // Külső pont nem szúrható be.
     } catch (const char* c) {
@@ -57,7 +56,7 @@ int main()
     } catch (std::exception& e) {
         std::cout << e.what() << std::endl;
     }
-    std::cout << std::endl << "Fájlból beolvasott char-t tartalmazó fában lévő elemek:"  << std::endl << charTree;
-     
+    std::cout << std::endl << "Fájlból beolvasott char-t tartalmazó fában lévő elemek:\n" << charTree;
+    
     return 0;
 }
