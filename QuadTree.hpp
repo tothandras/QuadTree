@@ -1,22 +1,22 @@
 ///  Tóth András (O8POUA) 
 ///  NHF 2013 - QuadTree (Négy elágazású duplán láncolt generikus fa)
 
-template <typename T>
+template <class T>
 class Point;
 
-template <typename T>
+template <class T>
 class QuadTree;
 
-template <typename T>
+template <class T>
 class QuadTreeNode;
 
-template <typename T>
+template <class T>
 std::ostream& operator<<(std::ostream &,const Point<T> &);
 
-template <typename T>
+template <class T>
 std::ostream& operator<<(std::ostream &,const QuadTree<T> &);
 
-template <typename T>
+template <class T>
 std::ostream& operator<<(std::ostream &,const QuadTreeNode<T> &);
 
 /// Point (pont) osztály. A négy elágazású generikus fát ilyen pontokkal tölthetjük fel.
@@ -224,7 +224,7 @@ public:
         double x, y;
         T data;
         while(is.good()){
-            is.ignore(512, '(');
+            is.ignore(256, '(');
             is >> x;
             is.ignore(256, ';');
             is >> y;

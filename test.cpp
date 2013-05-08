@@ -2,6 +2,8 @@
 ///  NHF 2013 - QuadTree (Négy elágazású duplán láncolt generikus fa)
 ///  Tesztprogram
 
+/// Input fájlt:
+#define input "/Users/tothandras/Dropbox/Mernokinformatika/Szoftlab2/Szoftlab2NHFquadtree/NHFQuadTree/input.dat"
 
 #include <iostream>
 #include <fstream>
@@ -20,7 +22,7 @@ int main()
     doubleTree.insert(Point<double>(99, 9, 9));
     doubleTree.insert(Point<double>(88, 8, 8));
     /// Beszúrás olyan helyre, ahol már található meglévő adat.
-    for (size_t i=0; i<5; ++i) {
+    for (size_t i=0; i<3; ++i) {
         doubleTree.insert(Point<double>(i, 9, 9));
     }
     /// Elemek kiírása.
@@ -49,13 +51,13 @@ int main()
     QuadTree<char> charTree(10, 10);
     try {
         std::fstream File;
-        File.open("/Users/tothandras/Dropbox/Mernokinformatika/Szoftlab2/Szoftlab2NHFquadtree/NHFQuadTree/input.dat");
+        File.open(input);
         File >> charTree;
         File.close();
     } catch (std::exception& e) {
         std::cout << e.what() << std::endl;
     }
-    std::cout << std::endl << "Char-t tartalmazó fában lévő elemek:"  << std::endl << charTree;
+    std::cout << std::endl << "Fájlból beolvasott char-t tartalmazó fában lévő elemek:"  << std::endl << charTree;
      
     return 0;
 }
