@@ -39,10 +39,12 @@ public:
     /// @brief Konstruktor adattal.
     Point(T data, double x=0, double y=0): data(data), x(x), y(y) {}
     
+    /// @brief operator==, két pont egyenlősége vizsgálható. Igaz, ha a két pont minden adata megegyezik.
     bool operator==(Point & point){
         return (x==point.x && y==point.y && data==point.data);
     }
     
+    /// @brief operator!=, két pont egyenlősége vizsgálható. Igaz, ha a két pont valamelyik adata nem egyezik meg.
     bool operator!=(Point & point){
         return !((*this) == point);
     }
@@ -84,13 +86,6 @@ class QuadTreeNode{
     /// @brief QuadTree és QuadTreeNode hozhat csak létre új csomópontot. (Adat nélkül)
     QuadTreeNode(double width, double height, double x=0, double y=0, unsigned level=1, QuadTreeNode *parent=NULL): parent(parent), children{NULL, NULL, NULL, NULL}, width(width), height(height), x(x), y(y), level(level), point(NULL), number_of_points(0){}
     
-    /// @brief Destruktor.
-    ~QuadTreeNode(){
-        for (size_t i=0; i<4; ++i)
-            delete children[i];
-        delete[] point;
-    }
-    
     /// @brief Terület felbontása négy egybevágó téglalapra.
     void split();
     
@@ -98,6 +93,14 @@ class QuadTreeNode{
     void insert(Point<T> new_point);
 
 public:
+    
+    /// @brief Destruktor.
+    ~QuadTreeNode(){
+        for (size_t i=0; i<4; ++i)
+            delete children[i];
+        delete[] point;
+    }
+
     /// @return A csomópont rendelkezik-e adattal?
     bool hasData() const{
         return number_of_points==0 ? false : true;
@@ -166,12 +169,17 @@ void QuadTreeNode<T>::insert(Point<T> new_point){
     }
     /// Ha van meglévő adat, de elérte a maximális mélységet a fa:
     else{
+        /// Létre kell hozni egy pontokat tároló tömböt amiben egyel több elemet tárolhatunk el.
         Point<T> *temp = new Point<T>[number_of_points+1];
         size_t i;
+        /// Átmásolja a meglévő elemeket az új tömbbe.
         for (i=0; i<number_of_points; ++i)
             temp[i]=point[i];
+        /// Az új tömbbe berakja az új pontot.
         temp[number_of_points]=new_point;
+        /// A csomópontban megnöveli a pontok számát tároló változót.
         ++number_of_points;
+        /// A régi tömböt törli.
         delete[] point;
         point = temp;
     }
@@ -229,6 +237,7 @@ public:
     
     friend class QuadTreeNode<T>;
     friend std::ostream& operator<< <T>(std::ostream &, const QuadTree<T> &);
+    /// Beolvasás. Az beolvasandó adatokat "(x;y): adat" alakban kapjuk.
     friend std::istream& operator>>(std::istream& is, QuadTree<T> & quadtree){
         double x, y;
         T data;
@@ -314,31 +323,34 @@ void QuadTree<T>::insert(Point<T> point){
 template <class T>
 class QuadTree<T>::iterator{
 protected:
-    QuadTreeNode<T> *Node;
+    QuadTreeNode<T> *node;
 public:
     /// @brief Konstruktor.
-    iterator(QuadTreeNode<T> *Node=NULL): Node(Node){}
+    iterator(QuadTreeNode<T> *node=NULL): node(node){}
     
-    QuadTreeNode<T>& operator*(){return *Node;}
-    QuadTreeNode<T>* operator&(){return Node;}
-    QuadTreeNode<T>* operator->(){return Node;}
+    QuadTreeNode<T>& operator*(){return *node;}
+    QuadTreeNode<T>* operator->(){return node;}
     
-    /// @brief Prefix inkrement.
+    /// @brief Prefix operator++
     /// @return Következő elem.
     iterator& operator++();
     
-    /// @brief Postfix inkrement.
-    iterator operator++(int){return ++(*this);}
+    /// @brief Postfix operator++
+    iterator operator++(int){
+        iterator temp(*this);
+        ++(*this);
+        return temp;
+    }
     
-    /// Egyenlőség operátor
+    /// @brief Egyenlőség operátor.
     /// @return Igaz, ha megegyezik az csomópont.
     bool operator==(const iterator& iter){
-        return Node==iter.Node;
+        return node==iter.node;
     }
     
     /// @return Igaz, ha nem egyezik meg a csomópont.
     bool operator!=(const iterator& iter){
-        return Node!=iter.Node;
+        return node!=iter.node;
     }
 };
 
@@ -348,26 +360,26 @@ template <class T>
 typename QuadTree<T>::iterator& QuadTree<T>::iterator::operator++(){
     size_t i=0;
     /// Ha a gyökér elemnél vagyunk (csak annak nincs szülője), akkor végigértünk az összes elemen.
-    if (Node->parent==NULL){
-        Node=Node->parent;
+    if (node->parent==NULL){
+        node=node->parent;
         return *this;
     }
     /// A szülő hányadig gyerekén állunk?
-    while (Node!=Node->parent->children[i])
+    while (node!=node->parent->children[i])
         ++i;
     /// Ha a következő gyerek levél, akkor ez lesz a következő elem.
-    if (i<3 && Node->parent->children[i+1]->isLeaf())
-        Node=Node->parent->children[i+1];
+    if (i<3 && node->parent->children[i+1]->isLeaf())
+        node=node->parent->children[i+1];
     /// Ha a következő gyerek nem levél, akkor a következő elem a legbaloldalibb levél a következő gyerek alatt.
     else if (i<3){
-        QuadTreeNode<T> *temp=Node->parent->children[i+1];
+        QuadTreeNode<T> *temp=node->parent->children[i+1];
         while(!temp->isLeaf())
             temp=temp->children[0];
-        Node=temp;
+        node=temp;
     }
     /// Egyébként a szülő a következő elem.
     else
-        Node=Node->parent;
+        node=node->parent;
     return *this;
 }
 
@@ -401,18 +413,3 @@ std::ostream& operator<<(std::ostream & os, const QuadTreeNode<T> & node){
     }
     return os;
 }
-
-/// Beolvasás.
-/*
-template <class T>
-std::istream& operator>>(std::istream& is,const QuadTree<T> & quadtree){
-    double x, y;
-    T data;
-    while (!is.eof()) {
-        is >> x >> y;
-        is.seekg(3, is.cur);
-        is >> data;
-        quadtree.instert(Point<T>(data, x, y));
-    }
-    return is;
-}*/

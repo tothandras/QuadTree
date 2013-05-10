@@ -13,31 +13,28 @@ Iterátor.
 \subsection*{Publikus tagfüggvények}
 \begin{DoxyCompactItemize}
 \item 
-\hypertarget{class_quad_tree_1_1iterator_a350d107e2c731c4d6c48bb1d9b55db44}{\hyperlink{class_quad_tree_1_1iterator_a350d107e2c731c4d6c48bb1d9b55db44}{iterator} (\hyperlink{class_quad_tree_node}{Quad\-Tree\-Node}$<$ T $>$ $\ast$Node=N\-U\-L\-L)}\label{class_quad_tree_1_1iterator_a350d107e2c731c4d6c48bb1d9b55db44}
+\hypertarget{class_quad_tree_1_1iterator_adbc837646b916ce34876855f52ce76e3}{\hyperlink{class_quad_tree_1_1iterator_adbc837646b916ce34876855f52ce76e3}{iterator} (\hyperlink{class_quad_tree_node}{Quad\-Tree\-Node}$<$ T $>$ $\ast$node=N\-U\-L\-L)}\label{class_quad_tree_1_1iterator_adbc837646b916ce34876855f52ce76e3}
 
 \begin{DoxyCompactList}\small\item\em Konstruktor. \end{DoxyCompactList}\item 
 \hypertarget{class_quad_tree_1_1iterator_a8a17ddd1067466f5c8a7f0cd65e57c4a}{\hyperlink{class_quad_tree_node}{Quad\-Tree\-Node}$<$ T $>$ \& {\bfseries operator$\ast$} ()}\label{class_quad_tree_1_1iterator_a8a17ddd1067466f5c8a7f0cd65e57c4a}
-
-\item 
-\hypertarget{class_quad_tree_1_1iterator_a40a7df8c079625c3ad454422d9abd8c3}{\hyperlink{class_quad_tree_node}{Quad\-Tree\-Node}$<$ T $>$ $\ast$ {\bfseries operator\&} ()}\label{class_quad_tree_1_1iterator_a40a7df8c079625c3ad454422d9abd8c3}
 
 \item 
 \hypertarget{class_quad_tree_1_1iterator_a12900f2e237588e0fd78eafb6c009364}{\hyperlink{class_quad_tree_node}{Quad\-Tree\-Node}$<$ T $>$ $\ast$ {\bfseries operator-\/$>$} ()}\label{class_quad_tree_1_1iterator_a12900f2e237588e0fd78eafb6c009364}
 
 \item 
 \hyperlink{class_quad_tree_1_1iterator}{iterator} \& \hyperlink{class_quad_tree_1_1iterator_a94a8a729d88aa6ec105d748ac9a5d14e}{operator++} ()
-\begin{DoxyCompactList}\small\item\em Prefix inkrement. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Prefix operator++. \end{DoxyCompactList}\item 
 \hypertarget{class_quad_tree_1_1iterator_a191a4cc5febf9c0c313f52770332f712}{\hyperlink{class_quad_tree_1_1iterator}{iterator} \hyperlink{class_quad_tree_1_1iterator_a191a4cc5febf9c0c313f52770332f712}{operator++} (int)}\label{class_quad_tree_1_1iterator_a191a4cc5febf9c0c313f52770332f712}
 
-\begin{DoxyCompactList}\small\item\em Postfix inkrement. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Postfix operator++. \end{DoxyCompactList}\item 
 bool \hyperlink{class_quad_tree_1_1iterator_a73eef33266569624d3993667207d5b33}{operator==} (const \hyperlink{class_quad_tree_1_1iterator}{iterator} \&iter)
-\item 
+\begin{DoxyCompactList}\small\item\em Egyenlőség operátor. \end{DoxyCompactList}\item 
 bool \hyperlink{class_quad_tree_1_1iterator_a145ee8bf74eee73d17bac0ab06565868}{operator!=} (const \hyperlink{class_quad_tree_1_1iterator}{iterator} \&iter)
 \end{DoxyCompactItemize}
 \subsection*{Védett attribútumok}
 \begin{DoxyCompactItemize}
 \item 
-\hypertarget{class_quad_tree_1_1iterator_aaa9d5117878bb8b3ff0197f8756eb726}{\hyperlink{class_quad_tree_node}{Quad\-Tree\-Node}$<$ T $>$ $\ast$ {\bfseries Node}}\label{class_quad_tree_1_1iterator_aaa9d5117878bb8b3ff0197f8756eb726}
+\hypertarget{class_quad_tree_1_1iterator_aab0bb24db4a4fdbc06aa20a9736e8748}{\hyperlink{class_quad_tree_node}{Quad\-Tree\-Node}$<$ T $>$ $\ast$ {\bfseries node}}\label{class_quad_tree_1_1iterator_aab0bb24db4a4fdbc06aa20a9736e8748}
 
 \end{DoxyCompactItemize}
 
@@ -67,7 +64,9 @@ Igaz, ha nem egyezik meg a csomópont.
 )}}\label{class_quad_tree_1_1iterator_a94a8a729d88aa6ec105d748ac9a5d14e}
 
 
-Prefix inkrement. 
+Prefix operator++. 
+
+Prefix inkrement.
 
 \begin{DoxyReturn}{Visszatérési érték}
 Következő elem. 
@@ -80,23 +79,22 @@ Ha a következő gyerek levél, akkor ez lesz a következő elem.
 
 Ha a következő gyerek nem levél, akkor a következő elem a legbaloldalibb levél a következő gyerek alatt.
 
-Egyébként a szülő a következő elem. 
-
-A függvény hívási gráfja\-:
-
-
-\hypertarget{class_quad_tree_1_1iterator_a73eef33266569624d3993667207d5b33}{\index{Quad\-Tree\-::iterator@{Quad\-Tree\-::iterator}!operator==@{operator==}}
+Egyébként a szülő a következő elem. \hypertarget{class_quad_tree_1_1iterator_a73eef33266569624d3993667207d5b33}{\index{Quad\-Tree\-::iterator@{Quad\-Tree\-::iterator}!operator==@{operator==}}
 \index{operator==@{operator==}!QuadTree::iterator@{Quad\-Tree\-::iterator}}
 \subsubsection[{operator==}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T$>$ bool {\bf Quad\-Tree}$<$ T $>$\-::iterator\-::operator== (
 \begin{DoxyParamCaption}
 \item[{const {\bf iterator} \&}]{iter}
 \end{DoxyParamCaption}
 )\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_quad_tree_1_1iterator_a73eef33266569624d3993667207d5b33}
-Egyenlőség operátor \begin{DoxyReturn}{Visszatérési érték}
+
+
+Egyenlőség operátor. 
+
+\begin{DoxyReturn}{Visszatérési érték}
 Igaz, ha megegyezik az csomópont. 
 \end{DoxyReturn}
 
 
 Ez a dokumentáció az osztályról a következő fájl alapján készült\-:\begin{DoxyCompactItemize}
 \item 
-/\-Users/tothandras/\-Dropbox/\-Mernokinformatika/\-Szoftlab2/\-Szoftlab2\-N\-H\-Fquadtree/\-N\-H\-F\-Quad\-Tree/Quad\-Tree.\-hpp\end{DoxyCompactItemize}
+Quad\-Tree.\-hpp\end{DoxyCompactItemize}

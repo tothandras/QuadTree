@@ -23,9 +23,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		0D31FB8917186FBB00499F11 /* NHF - QuadTree */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; name = "NHF - QuadTree"; path = "/Users/tothandras/Dropbox/Mernokinformatika/Szoftlab2/Szoftlab2NHFquadtree/NHFQuadTree/build/Release/NHF - QuadTree"; sourceTree = "<absolute>"; };
-		0D31FB991718700700499F11 /* QuadTree.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = QuadTree.hpp; sourceTree = "<group>"; };
+		0D31FB991718700700499F11 /* QuadTree.hpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.h; fileEncoding = 4; path = QuadTree.hpp; sourceTree = "<group>"; };
 		0D5199D21739960200A0115C /* test.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = test.cpp; sourceTree = "<group>"; };
+		0D5F7C83173CF64C007AADE9 /* NHF - QuadTree */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "NHF - QuadTree"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -44,6 +44,7 @@
 			children = (
 				0D31FB991718700700499F11 /* QuadTree.hpp */,
 				0D5199D21739960200A0115C /* test.cpp */,
+				0D5F7C83173CF64C007AADE9 /* NHF - QuadTree */,
 			);
 			sourceTree = "<group>";
 		};
@@ -64,7 +65,7 @@
 			);
 			name = "NHF - QuadTree";
 			productName = "NHF - QuadTree";
-			productReference = 0D31FB8917186FBB00499F11 /* NHF - QuadTree */;
+			productReference = 0D5F7C83173CF64C007AADE9 /* NHF - QuadTree */;
 			productType = "com.apple.product-type.tool";
 		};
 /* End PBXNativeTarget section */
