@@ -6,12 +6,17 @@
 // Amennyiben lehetséges használjon iterátort!
 // - Tóth András (O8POUA)
 
-// Input fájlt:
-#define input "/Users/tothandras/Dropbox/Mernokinformatika/Szoftlab2/Szoftlab2NHFquadtree/NHFQuadTree/input.dat"
+// Input fájlok:
+#define input_ch "/Users/tothandras/Dropbox/Mernokinformatika/Szoftlab2/Szoftlab2NHFquadtree/NHFQuadTree/input_ch.dat"
+#define input_s "/Users/tothandras/Dropbox/Mernokinformatika/Szoftlab2/Szoftlab2NHFquadtree/NHFQuadTree/input_s.dat"
+
 
 #include <iostream>
 #include <fstream>
+#include <string>
+//#include "String.hpp" // Saját osztályon, amely dinamikus adatot tartalmaz.
 #include "QuadTree.hpp"
+
 
 int main()
 {
@@ -24,9 +29,8 @@ int main()
     nTree.insert(Point<int>(66, 6, 6));
     nTree.insert(Point<int>(99, 9, 9));
     // Beszúrás olyan helyre, ahol már található meglévő adat.
-    for (int i=0; i<3; ++i) {
-        nTree.insert(Point<int>(i, 9, 9));
-    }
+    nTree.insert(Point<int>(99.1, 9, 9));
+    
     // Elemek kiírása.
     std::cout << "Double-t tartalmazó fában lévő elemek:\n" << nTree << std::endl;
     // Fa mélységének kiírása.
@@ -50,16 +54,23 @@ int main()
     }
     
     // Fájlból beolvasás.
-    QuadTree<char> chTree(10, 10);
+    QuadTree<char> chTree(150, 150);
+    QuadTree<std::string> sTree(5.1, 4.8);
     try {
         std::fstream File;
-        File.open(input);
+        // Char-t tartalmazó fába beolvasás.
+        File.open(input_ch);
         File >> chTree;
+        File.close();
+        // String-et tartalmazó fába beolvasás.
+        File.open(input_s);
+        File >> sTree;
         File.close();
     } catch (std::exception& e) {
         std::cout << e.what() << std::endl;
     }
     std::cout << std::endl << "Fájlból beolvasott char-t tartalmazó fában lévő elemek:\n" << chTree;
+    std::cout << std::endl << "Fájlból beolvasott String-et tartalmazó fában lévő elemek:\n" << sTree;
     
     return 0;
 }

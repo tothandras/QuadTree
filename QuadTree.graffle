@@ -26,7 +26,7 @@
 	<key>MasterSheets</key>
 	<array/>
 	<key>ModificationDate</key>
-	<string>2013-05-10 08:40:17 +0000</string>
+	<string>2013-05-11 12:16:27 +0000</string>
 	<key>Modifier</key>
 	<string>Tóth András</string>
 	<key>NotesVisible</key>
@@ -116,6 +116,54 @@
 			<string>1.000 cm = 1.000 cm</string>
 			<key>GraphicsList</key>
 			<array>
+				<dict>
+					<key>Bounds</key>
+					<string>{{21.692398071289062, 49}, {124, 14}}</string>
+					<key>Class</key>
+					<string>ShapedGraphic</string>
+					<key>FitText</key>
+					<string>YES</string>
+					<key>Flow</key>
+					<string>Resize</string>
+					<key>ID</key>
+					<integer>79</integer>
+					<key>Shape</key>
+					<string>Rectangle</string>
+					<key>Style</key>
+					<dict>
+						<key>fill</key>
+						<dict>
+							<key>Draws</key>
+							<string>NO</string>
+						</dict>
+						<key>shadow</key>
+						<dict>
+							<key>Draws</key>
+							<string>NO</string>
+						</dict>
+						<key>stroke</key>
+						<dict>
+							<key>Draws</key>
+							<string>NO</string>
+						</dict>
+					</dict>
+					<key>Text</key>
+					<dict>
+						<key>Pad</key>
+						<integer>0</integer>
+						<key>Text</key>
+						<string>{\rtf1\ansi\ansicpg1252\cocoartf1187\cocoasubrtf340
+\cocoascreenfonts1{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\qc
+
+\f0\fs24 \cf0 1-21: bej\'e1r\'e1s sorrendje}</string>
+						<key>VerticalPad</key>
+						<integer>0</integer>
+					</dict>
+					<key>Wrap</key>
+					<string>NO</string>
+				</dict>
 				<dict>
 					<key>Bounds</key>
 					<string>{{270.5, 11}, {18, 18}}</string>
@@ -1530,8 +1578,8 @@
 					<integer>35</integer>
 					<key>Points</key>
 					<array>
-						<string>{103.54521033388293, 149.33757830865014}</string>
-						<string>{259.64720681089244, 79.182105529240474}</string>
+						<string>{103.54521033388293, 149.33757830865017}</string>
+						<string>{259.6472068108925, 79.182105529240445}</string>
 					</array>
 					<key>Style</key>
 					<dict>
@@ -1944,8 +1992,8 @@
 					<integer>10</integer>
 					<key>Points</key>
 					<array>
-						<string>{257.42406203072369, 125.15187593363991}</string>
-						<string>{246.10399253472443, 147.79201492311944}</string>
+						<string>{257.42406203289568, 125.15187593392142}</string>
+						<string>{246.10399253753911, 147.79201492448715}</string>
 					</array>
 					<key>Style</key>
 					<dict>
@@ -2636,7 +2684,7 @@
 			<array>
 				<dict>
 					<key>Bounds</key>
-					<string>{{84, 359.25198364257812}, {42, 22}}</string>
+					<string>{{291.35827396392779, 309.25198650360107}, {127, 26}}</string>
 					<key>Class</key>
 					<string>ShapedGraphic</string>
 					<key>FitText</key>
@@ -2650,23 +2698,32 @@
 							<key>b</key>
 							<string>1</string>
 							<key>g</key>
-							<string>0</string>
+							<string>0.882706</string>
 							<key>r</key>
-							<string>0</string>
+							<string>0.380747</string>
 						</dict>
 						<key>Font</key>
-						<string>Helvetica</string>
+						<string>Avenir-Medium</string>
 						<key>Size</key>
-						<real>12</real>
+						<real>18</real>
 					</dict>
 					<key>ID</key>
-					<integer>26</integer>
+					<integer>41</integer>
 					<key>Shape</key>
 					<string>Rectangle</string>
 					<key>Style</key>
 					<dict>
 						<key>fill</key>
 						<dict>
+							<key>Color</key>
+							<dict>
+								<key>b</key>
+								<string>1</string>
+								<key>g</key>
+								<string>0.962171</string>
+								<key>r</key>
+								<string>0.596026</string>
+							</dict>
 							<key>Draws</key>
 							<string>NO</string>
 						</dict>
@@ -2687,11 +2744,11 @@
 						<integer>0</integer>
 						<key>Text</key>
 						<string>{\rtf1\ansi\ansicpg1252\cocoartf1187\cocoasubrtf340
-\cocoascreenfonts1{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
-{\colortbl;\red255\green255\blue255;\red0\green0\blue255;}
+\cocoascreenfonts1{\fonttbl\f0\fnil\fcharset0 Avenir-Medium;}
+{\colortbl;\red255\green255\blue255;\red97\green225\blue255;}
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\qc
 
-\f0\fs36 \cf2 Point}</string>
+\f0\fs36 \cf2 QuadTreeNode}</string>
 						<key>VerticalPad</key>
 						<integer>0</integer>
 					</dict>
@@ -2700,11 +2757,11 @@
 				</dict>
 				<dict>
 					<key>Bounds</key>
-					<string>{{67.901580810546875, 366}, {8.5039377212524414, 8.5039377212524414}}</string>
+					<string>{{415, 245.62992858886719}, {8.5039377212524414, 8.5039377212524414}}</string>
 					<key>Class</key>
 					<string>ShapedGraphic</string>
 					<key>ID</key>
-					<integer>40</integer>
+					<integer>29</integer>
 					<key>Shape</key>
 					<string>Circle</string>
 					<key>Style</key>
@@ -2739,6 +2796,222 @@
 							</dict>
 						</dict>
 					</dict>
+				</dict>
+				<dict>
+					<key>Bounds</key>
+					<string>{{279.50003051757812, 196.73226928710938}, {212.59841918945312, 141.73228454589844}}</string>
+					<key>Class</key>
+					<string>ShapedGraphic</string>
+					<key>ID</key>
+					<integer>6</integer>
+					<key>Shape</key>
+					<string>Rectangle</string>
+					<key>Style</key>
+					<dict>
+						<key>stroke</key>
+						<dict>
+							<key>Color</key>
+							<dict>
+								<key>b</key>
+								<string>1</string>
+								<key>g</key>
+								<string>0.940944</string>
+								<key>r</key>
+								<string>0.365022</string>
+							</dict>
+							<key>Width</key>
+							<real>3</real>
+						</dict>
+					</dict>
+				</dict>
+				<dict>
+					<key>Bounds</key>
+					<string>{{64.901580810546875, 23.732284545898438}, {84, 26}}</string>
+					<key>Class</key>
+					<string>ShapedGraphic</string>
+					<key>FitText</key>
+					<string>YES</string>
+					<key>Flow</key>
+					<string>Resize</string>
+					<key>FontInfo</key>
+					<dict>
+						<key>Color</key>
+						<dict>
+							<key>b</key>
+							<string>0.5</string>
+							<key>g</key>
+							<string>0.120766</string>
+							<key>r</key>
+							<string>0.244293</string>
+						</dict>
+						<key>Font</key>
+						<string>Avenir-Black</string>
+						<key>Size</key>
+						<real>18</real>
+					</dict>
+					<key>ID</key>
+					<integer>45</integer>
+					<key>Shape</key>
+					<string>Rectangle</string>
+					<key>Style</key>
+					<dict>
+						<key>fill</key>
+						<dict>
+							<key>Color</key>
+							<dict>
+								<key>b</key>
+								<string>1</string>
+								<key>g</key>
+								<string>0.962171</string>
+								<key>r</key>
+								<string>0.596026</string>
+							</dict>
+							<key>Draws</key>
+							<string>NO</string>
+						</dict>
+						<key>shadow</key>
+						<dict>
+							<key>Draws</key>
+							<string>NO</string>
+						</dict>
+						<key>stroke</key>
+						<dict>
+							<key>Draws</key>
+							<string>NO</string>
+						</dict>
+					</dict>
+					<key>Text</key>
+					<dict>
+						<key>Pad</key>
+						<integer>0</integer>
+						<key>Text</key>
+						<string>{\rtf1\ansi\ansicpg1252\cocoartf1187\cocoasubrtf340
+\cocoascreenfonts1{\fonttbl\f0\fnil\fcharset0 Avenir-Book;}
+{\colortbl;\red255\green255\blue255;\red62\green31\blue128;}
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\qc
+
+\f0\b\fs36 \cf2 QuadTree}</string>
+						<key>VerticalPad</key>
+						<integer>0</integer>
+					</dict>
+					<key>Wrap</key>
+					<string>NO</string>
+				</dict>
+				<dict>
+					<key>Bounds</key>
+					<string>{{233, 318}, {8.5039377212524414, 8.5039377212524414}}</string>
+					<key>Class</key>
+					<string>ShapedGraphic</string>
+					<key>ID</key>
+					<integer>27</integer>
+					<key>Shape</key>
+					<string>Circle</string>
+					<key>Style</key>
+					<dict>
+						<key>fill</key>
+						<dict>
+							<key>Color</key>
+							<dict>
+								<key>b</key>
+								<string>1</string>
+								<key>g</key>
+								<string>0</string>
+								<key>r</key>
+								<string>0</string>
+							</dict>
+						</dict>
+						<key>shadow</key>
+						<dict>
+							<key>Draws</key>
+							<string>NO</string>
+						</dict>
+						<key>stroke</key>
+						<dict>
+							<key>Color</key>
+							<dict>
+								<key>b</key>
+								<string>1</string>
+								<key>g</key>
+								<string>0</string>
+								<key>r</key>
+								<string>0</string>
+							</dict>
+						</dict>
+					</dict>
+				</dict>
+				<dict>
+					<key>Bounds</key>
+					<string>{{173.2008056640625, 267.59841918945312}, {106.29920959472656, 70.866142272949219}}</string>
+					<key>Class</key>
+					<string>ShapedGraphic</string>
+					<key>ID</key>
+					<integer>12</integer>
+					<key>Shape</key>
+					<string>Rectangle</string>
+				</dict>
+				<dict>
+					<key>Bounds</key>
+					<string>{{306.092529296875, 78.543270111083984}, {43, 26}}</string>
+					<key>Class</key>
+					<string>ShapedGraphic</string>
+					<key>FitText</key>
+					<string>YES</string>
+					<key>Flow</key>
+					<string>Resize</string>
+					<key>FontInfo</key>
+					<dict>
+						<key>Color</key>
+						<dict>
+							<key>b</key>
+							<string>1</string>
+							<key>g</key>
+							<string>0</string>
+							<key>r</key>
+							<string>0</string>
+						</dict>
+						<key>Font</key>
+						<string>Avenir-Medium</string>
+						<key>Size</key>
+						<real>18</real>
+					</dict>
+					<key>ID</key>
+					<integer>26</integer>
+					<key>Shape</key>
+					<string>Rectangle</string>
+					<key>Style</key>
+					<dict>
+						<key>fill</key>
+						<dict>
+							<key>Draws</key>
+							<string>NO</string>
+						</dict>
+						<key>shadow</key>
+						<dict>
+							<key>Draws</key>
+							<string>NO</string>
+						</dict>
+						<key>stroke</key>
+						<dict>
+							<key>Draws</key>
+							<string>NO</string>
+						</dict>
+					</dict>
+					<key>Text</key>
+					<dict>
+						<key>Pad</key>
+						<integer>0</integer>
+						<key>Text</key>
+						<string>{\rtf1\ansi\ansicpg1252\cocoartf1187\cocoasubrtf340
+\cocoascreenfonts1{\fonttbl\f0\fnil\fcharset0 Avenir-Medium;}
+{\colortbl;\red255\green255\blue255;\red0\green0\blue255;}
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\qc
+
+\f0\fs36 \cf2 Point}</string>
+						<key>VerticalPad</key>
+						<integer>0</integer>
+					</dict>
+					<key>Wrap</key>
+					<string>NO</string>
 				</dict>
 				<dict>
 					<key>Bounds</key>
@@ -3120,95 +3393,11 @@
 				</dict>
 				<dict>
 					<key>Bounds</key>
-					<string>{{415, 245.62992858886719}, {8.5039377212524414, 8.5039377212524414}}</string>
-					<key>Class</key>
-					<string>ShapedGraphic</string>
-					<key>ID</key>
-					<integer>29</integer>
-					<key>Shape</key>
-					<string>Circle</string>
-					<key>Style</key>
-					<dict>
-						<key>fill</key>
-						<dict>
-							<key>Color</key>
-							<dict>
-								<key>b</key>
-								<string>1</string>
-								<key>g</key>
-								<string>0</string>
-								<key>r</key>
-								<string>0</string>
-							</dict>
-						</dict>
-						<key>shadow</key>
-						<dict>
-							<key>Draws</key>
-							<string>NO</string>
-						</dict>
-						<key>stroke</key>
-						<dict>
-							<key>Color</key>
-							<dict>
-								<key>b</key>
-								<string>1</string>
-								<key>g</key>
-								<string>0</string>
-								<key>r</key>
-								<string>0</string>
-							</dict>
-						</dict>
-					</dict>
-				</dict>
-				<dict>
-					<key>Bounds</key>
 					<string>{{94.7991943359375, 245.62991905212402}, {8.5039377212524414, 8.5039377212524414}}</string>
 					<key>Class</key>
 					<string>ShapedGraphic</string>
 					<key>ID</key>
 					<integer>28</integer>
-					<key>Shape</key>
-					<string>Circle</string>
-					<key>Style</key>
-					<dict>
-						<key>fill</key>
-						<dict>
-							<key>Color</key>
-							<dict>
-								<key>b</key>
-								<string>1</string>
-								<key>g</key>
-								<string>0</string>
-								<key>r</key>
-								<string>0</string>
-							</dict>
-						</dict>
-						<key>shadow</key>
-						<dict>
-							<key>Draws</key>
-							<string>NO</string>
-						</dict>
-						<key>stroke</key>
-						<dict>
-							<key>Color</key>
-							<dict>
-								<key>b</key>
-								<string>1</string>
-								<key>g</key>
-								<string>0</string>
-								<key>r</key>
-								<string>0</string>
-							</dict>
-						</dict>
-					</dict>
-				</dict>
-				<dict>
-					<key>Bounds</key>
-					<string>{{233, 318}, {8.5039377212524414, 8.5039377212524414}}</string>
-					<key>Class</key>
-					<string>ShapedGraphic</string>
-					<key>ID</key>
-					<integer>27</integer>
 					<key>Shape</key>
 					<string>Circle</string>
 					<key>Style</key>
@@ -3408,16 +3597,6 @@
 				</dict>
 				<dict>
 					<key>Bounds</key>
-					<string>{{173.2008056640625, 267.59841918945312}, {106.29920959472656, 70.866142272949219}}</string>
-					<key>Class</key>
-					<string>ShapedGraphic</string>
-					<key>ID</key>
-					<integer>12</integer>
-					<key>Shape</key>
-					<string>Rectangle</string>
-				</dict>
-				<dict>
-					<key>Bounds</key>
 					<string>{{173.2008056640625, 196.73228454589844}, {106.29920959472656, 70.866142272949219}}</string>
 					<key>Class</key>
 					<string>ShapedGraphic</string>
@@ -3458,16 +3637,6 @@
 				</dict>
 				<dict>
 					<key>Bounds</key>
-					<string>{{279.5, 196.73228454589844}, {212.59841918945312, 141.73228454589844}}</string>
-					<key>Class</key>
-					<string>ShapedGraphic</string>
-					<key>ID</key>
-					<integer>6</integer>
-					<key>Shape</key>
-					<string>Rectangle</string>
-				</dict>
-				<dict>
-					<key>Bounds</key>
 					<string>{{66.901580810546875, 55}, {212.59841918945312, 141.73228454589844}}</string>
 					<key>Class</key>
 					<string>ShapedGraphic</string>
@@ -3475,6 +3644,33 @@
 					<integer>5</integer>
 					<key>Shape</key>
 					<string>Rectangle</string>
+				</dict>
+				<dict>
+					<key>Bounds</key>
+					<string>{{64.901580810546875, 53.000000953674316}, {430.86611938476562, 289.13385009765625}}</string>
+					<key>Class</key>
+					<string>ShapedGraphic</string>
+					<key>ID</key>
+					<integer>44</integer>
+					<key>Shape</key>
+					<string>Rectangle</string>
+					<key>Style</key>
+					<dict>
+						<key>stroke</key>
+						<dict>
+							<key>Color</key>
+							<dict>
+								<key>b</key>
+								<string>0.5</string>
+								<key>g</key>
+								<string>0.117285</string>
+								<key>r</key>
+								<string>0.226895</string>
+							</dict>
+							<key>Width</key>
+							<real>6</real>
+						</dict>
+					</dict>
 				</dict>
 			</array>
 			<key>GridInfo</key>
@@ -3567,7 +3763,7 @@
 			<array>
 				<dict>
 					<key>Bounds</key>
-					<string>{{131.74670046562531, 531.00776764057275}, {8, 22}}</string>
+					<string>{{217.6470628934199, 583.2352424051976}, {6, 12}}</string>
 					<key>Class</key>
 					<string>ShapedGraphic</string>
 					<key>FitText</key>
@@ -3579,7 +3775,7 @@
 						<key>Font</key>
 						<string>Helvetica</string>
 						<key>Size</key>
-						<real>12</real>
+						<real>10</real>
 					</dict>
 					<key>ID</key>
 					<integer>88</integer>
@@ -3613,7 +3809,7 @@
 {\colortbl;\red255\green255\blue255;}
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\qc
 
-\f0\fs36 \cf0 *}</string>
+\f0\fs20 \cf0 1}</string>
 						<key>VerticalPad</key>
 						<integer>0</integer>
 					</dict>
@@ -3640,9 +3836,9 @@
 					<real>-1</real>
 					<key>Points</key>
 					<array>
-						<string>{131.72000122070312, 722.66663838757529}</string>
-						<string>{113.3333047893324, 551.66664474540369}</string>
-						<string>{149.22297739874716, 547.73318106555632}</string>
+						<string>{127.09896850585938, 650.17648257791257}</string>
+						<string>{114.96078996024019, 613.72550167243628}</string>
+						<string>{228.94923027998055, 577.93410472226151}</string>
 					</array>
 					<key>Style</key>
 					<dict>
@@ -3672,7 +3868,7 @@
 				</dict>
 				<dict>
 					<key>Bounds</key>
-					<string>{{131.72000122070312, 713.66663838757529}, {18, 18}}</string>
+					<string>{{127.09896850585938, 641.17648257791257}, {18, 18}}</string>
 					<key>Class</key>
 					<string>ShapedGraphic</string>
 					<key>ID</key>
@@ -3709,9 +3905,9 @@
 					<real>-1</real>
 					<key>Points</key>
 					<array>
-						<string>{131.72000122070312, 185.33627641661533}</string>
-						<string>{82.985931540453549, 745.07044505278498}</string>
-						<string>{149.22037321815375, 747.64515977840927}</string>
+						<string>{131.72000122070312, 200.17647416313909}</string>
+						<string>{96.333338631524086, 650.98040432986852}</string>
+						<string>{144.62840355303325, 668.32198667914031}</string>
 					</array>
 					<key>Style</key>
 					<dict>
@@ -3741,7 +3937,7 @@
 				</dict>
 				<dict>
 					<key>Bounds</key>
-					<string>{{131.72000122070312, 176.33627641661533}, {18, 18}}</string>
+					<string>{{131.72000122070312, 191.17647416313909}, {18, 18}}</string>
 					<key>Class</key>
 					<string>ShapedGraphic</string>
 					<key>ID</key>
@@ -3788,11 +3984,11 @@
 					<key>OrthogonalBarPoint</key>
 					<string>{0, 0}</string>
 					<key>OrthogonalBarPosition</key>
-					<real>228.86822509765625</real>
+					<real>258.27450561523438</real>
 					<key>Points</key>
 					<array>
-						<string>{712.02810797024677, 389.53282111278247}</string>
-						<string>{578.9684241670185, 662.95447403911044}</string>
+						<string>{708.19609133769188, 335.47059434012982}</string>
+						<string>{574.91882464404102, 619.78681762061365}</string>
 					</array>
 					<key>Style</key>
 					<dict>
@@ -3822,7 +4018,7 @@
 				</dict>
 				<dict>
 					<key>Bounds</key>
-					<string>{{694.02810797024677, 380.53282111278247}, {18, 18}}</string>
+					<string>{{690.19609133769188, 326.47059434012982}, {18, 18}}</string>
 					<key>Class</key>
 					<string>ShapedGraphic</string>
 					<key>ID</key>
@@ -3841,7 +4037,7 @@
 				</dict>
 				<dict>
 					<key>Bounds</key>
-					<string>{{419.7183225439129, 316.90141802812212}, {8, 22}}</string>
+					<string>{{421.78957845450668, 252.94118120046096}, {8, 22}}</string>
 					<key>Class</key>
 					<string>ShapedGraphic</string>
 					<key>FitText</key>
@@ -3901,9 +4097,16 @@
 					<array>
 						<dict>
 							<key>Bounds</key>
-							<string>{{668.24677552785374, 644.11842394414259}, {43.781334000864291, 28.928458988086746}}</string>
+							<string>{{661.28598001422995, 607.88236427087202}, {50.742142776589617, 22}}</string>
 							<key>Class</key>
 							<string>ShapedGraphic</string>
+							<key>FontInfo</key>
+							<dict>
+								<key>Font</key>
+								<string>Avenir-Book</string>
+								<key>Size</key>
+								<real>11</real>
+							</dict>
 							<key>ID</key>
 							<integer>74</integer>
 							<key>Shape</key>
@@ -3925,11 +4128,11 @@
 							<dict>
 								<key>Text</key>
 								<string>{\rtf1\ansi\ansicpg1252\cocoartf1187\cocoasubrtf340
-\cocoascreenfonts1{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+\cocoascreenfonts1{\fonttbl\f0\fnil\fcharset0 Avenir-Book;}
 {\colortbl;\red255\green255\blue255;}
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\qc
 
-\f0\fs24 \cf0 T}</string>
+\f0\fs22 \cf0 T: class}</string>
 								<key>VerticalPad</key>
 								<integer>0</integer>
 							</dict>
@@ -3941,13 +4144,20 @@
 							<array>
 								<dict>
 									<key>Bounds</key>
-									<string>{{456.91000998254094, 663.40406326953405}, {236.86619567871094, 14}}</string>
+									<string>{{452.28900890871182, 620.23954460817674}, {236.86619567871094, 17}}</string>
 									<key>Class</key>
 									<string>ShapedGraphic</string>
 									<key>FitText</key>
 									<string>Vertical</string>
 									<key>Flow</key>
 									<string>Resize</string>
+									<key>FontInfo</key>
+									<dict>
+										<key>Font</key>
+										<string>Avenir-Book</string>
+										<key>Size</key>
+										<real>11</real>
+									</dict>
 									<key>ID</key>
 									<integer>76</integer>
 									<key>Shape</key>
@@ -3964,11 +4174,11 @@
 									<dict>
 										<key>Text</key>
 										<string>{\rtf1\ansi\ansicpg1252\cocoartf1187\cocoasubrtf340
-\cocoascreenfonts1{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+\cocoascreenfonts1{\fonttbl\f0\fnil\fcharset0 Avenir-Book;}
 {\colortbl;\red255\green255\blue255;\red0\green0\blue255;}
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\qc
 
-\f0\b\fs24 \cf2 Point}</string>
+\f0\fs22 \cf2 Point}</string>
 										<key>VerticalPad</key>
 										<integer>0</integer>
 									</dict>
@@ -3977,13 +4187,20 @@
 								</dict>
 								<dict>
 									<key>Bounds</key>
-									<string>{{456.91000998254094, 677.40406326953405}, {236.86619567871094, 42}}</string>
+									<string>{{452.28900890871182, 637.23954460817674}, {236.86619567871094, 45}}</string>
 									<key>Class</key>
 									<string>ShapedGraphic</string>
 									<key>FitText</key>
 									<string>Vertical</string>
 									<key>Flow</key>
 									<string>Resize</string>
+									<key>FontInfo</key>
+									<dict>
+										<key>Font</key>
+										<string>Avenir-Book</string>
+										<key>Size</key>
+										<real>11</real>
+									</dict>
 									<key>ID</key>
 									<integer>77</integer>
 									<key>Shape</key>
@@ -4002,11 +4219,11 @@
 										<integer>0</integer>
 										<key>Text</key>
 										<string>{\rtf1\ansi\ansicpg1252\cocoartf1187\cocoasubrtf340
-\cocoascreenfonts1{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+\cocoascreenfonts1{\fonttbl\f0\fnil\fcharset0 Avenir-Book;}
 {\colortbl;\red255\green255\blue255;}
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720
 
-\f0\fs24 \cf0 -x: double\
+\f0\fs22 \cf0 -x: double\
 -y: double\
 -data: T}</string>
 										<key>VerticalPad</key>
@@ -4017,13 +4234,20 @@
 								</dict>
 								<dict>
 									<key>Bounds</key>
-									<string>{{456.91000998254094, 719.40406326953405}, {236.86619567871094, 140}}</string>
+									<string>{{452.28900890871182, 682.23954460817674}, {236.86619567871094, 75}}</string>
 									<key>Class</key>
 									<string>ShapedGraphic</string>
 									<key>FitText</key>
 									<string>Vertical</string>
 									<key>Flow</key>
 									<string>Resize</string>
+									<key>FontInfo</key>
+									<dict>
+										<key>Font</key>
+										<string>Avenir-Book</string>
+										<key>Size</key>
+										<real>11</real>
+									</dict>
 									<key>ID</key>
 									<integer>78</integer>
 									<key>Shape</key>
@@ -4042,19 +4266,15 @@
 										<integer>0</integer>
 										<key>Text</key>
 										<string>{\rtf1\ansi\ansicpg1252\cocoartf1187\cocoasubrtf340
-\cocoascreenfonts1{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+\cocoascreenfonts1{\fonttbl\f0\fnil\fcharset0 Avenir-Book;}
 {\colortbl;\red255\green255\blue255;}
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720
 
-\f0\fs24 \cf0 +Point()\
+\f0\fs22 \cf0 +Point()\
 +Point(data: T, x: double, y: double)\
 +operator==(point: Point&amp;): bool\
 +operator!=(point: Point&amp;): bool\
-+getData(): T&amp;\
-\
-friend class QuadTree&lt;T&gt;\
-friend class QuadTreeNode&lt;T&gt;\
-friend operator&lt;&lt; &lt;T&gt;(os: std::ostream&amp;, point: const Point&amp;): std::ostream&amp; }</string>
++getData(): T&amp;}</string>
 										<key>VerticalPad</key>
 										<integer>0</integer>
 									</dict>
@@ -4093,11 +4313,11 @@ friend operator&lt;&lt; &lt;T&gt;(os: std::ostream&amp;, point: const Point&amp;
 					<key>OrthogonalBarPoint</key>
 					<string>{0, 0}</string>
 					<key>OrthogonalBarPosition</key>
-					<real>244.10076904296875</real>
+					<real>187.25489807128906</real>
 					<key>Points</key>
 					<array>
-						<string>{709.93225851163402, 58.612404567878329}</string>
-						<string>{427.99465145318067, 335.64955961575788}</string>
+						<string>{712.02814474210277, 63.087553427150922}</string>
+						<string>{432.11467854028939, 275.48208403347002}</string>
 					</array>
 					<key>Style</key>
 					<dict>
@@ -4127,7 +4347,7 @@ friend operator&lt;&lt; &lt;T&gt;(os: std::ostream&amp;, point: const Point&amp;
 				</dict>
 				<dict>
 					<key>Bounds</key>
-					<string>{{691.93225851163402, 49.612404567878329}, {18, 18}}</string>
+					<string>{{694.02814474210277, 54.087553427150922}, {18, 18}}</string>
 					<key>Class</key>
 					<string>ShapedGraphic</string>
 					<key>ID</key>
@@ -4164,9 +4384,16 @@ friend operator&lt;&lt; &lt;T&gt;(os: std::ostream&amp;, point: const Point&amp;
 					<array>
 						<dict>
 							<key>Bounds</key>
-							<string>{{640.07467277944124, 322}, {76.574466624855603, 22.223076923076924}}</string>
+							<string>{{640.0747326911611, 261.78431974012773}, {76.574466624855603, 22.223076923076924}}</string>
 							<key>Class</key>
 							<string>ShapedGraphic</string>
+							<key>FontInfo</key>
+							<dict>
+								<key>Font</key>
+								<string>Avenir-Book</string>
+								<key>Size</key>
+								<real>11</real>
+							</dict>
 							<key>ID</key>
 							<integer>55</integer>
 							<key>Shape</key>
@@ -4188,11 +4415,11 @@ friend operator&lt;&lt; &lt;T&gt;(os: std::ostream&amp;, point: const Point&amp;
 							<dict>
 								<key>Text</key>
 								<string>{\rtf1\ansi\ansicpg1252\cocoartf1187\cocoasubrtf340
-\cocoascreenfonts1{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+\cocoascreenfonts1{\fonttbl\f0\fnil\fcharset0 Avenir-Book;}
 {\colortbl;\red255\green255\blue255;}
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\qc
 
-\f0\fs24 \cf0 T}</string>
+\f0\fs22 \cf0 T: class}</string>
 								<key>VerticalPad</key>
 								<integer>0</integer>
 							</dict>
@@ -4204,13 +4431,20 @@ friend operator&lt;&lt; &lt;T&gt;(os: std::ostream&amp;, point: const Point&amp;
 							<array>
 								<dict>
 									<key>Bounds</key>
-									<string>{{149.72000122070318, 336}, {541.58837890625, 14}}</string>
+									<string>{{149.72007667207112, 275.78431917840959}, {541.58837890625, 17}}</string>
 									<key>Class</key>
 									<string>ShapedGraphic</string>
 									<key>FitText</key>
 									<string>Vertical</string>
 									<key>Flow</key>
 									<string>Resize</string>
+									<key>FontInfo</key>
+									<dict>
+										<key>Font</key>
+										<string>Avenir-Book</string>
+										<key>Size</key>
+										<real>11</real>
+									</dict>
 									<key>ID</key>
 									<integer>57</integer>
 									<key>Shape</key>
@@ -4227,11 +4461,11 @@ friend operator&lt;&lt; &lt;T&gt;(os: std::ostream&amp;, point: const Point&amp;
 									<dict>
 										<key>Text</key>
 										<string>{\rtf1\ansi\ansicpg1252\cocoartf1187\cocoasubrtf340
-\cocoascreenfonts1{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+\cocoascreenfonts1{\fonttbl\f0\fnil\fcharset0 Avenir-Book;}
 {\colortbl;\red255\green255\blue255;\red0\green0\blue255;}
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\qc
 
-\f0\b\fs24 \cf2 QuadTreeNode}</string>
+\f0\fs22 \cf2 QuadTreeNode}</string>
 										<key>VerticalPad</key>
 										<integer>0</integer>
 									</dict>
@@ -4240,13 +4474,20 @@ friend operator&lt;&lt; &lt;T&gt;(os: std::ostream&amp;, point: const Point&amp;
 								</dict>
 								<dict>
 									<key>Bounds</key>
-									<string>{{149.72000122070318, 350}, {541.58837890625, 98}}</string>
+									<string>{{149.72007667207112, 292.78431917840959}, {541.58837890625, 165}}</string>
 									<key>Class</key>
 									<string>ShapedGraphic</string>
 									<key>FitText</key>
 									<string>Vertical</string>
 									<key>Flow</key>
 									<string>Resize</string>
+									<key>FontInfo</key>
+									<dict>
+										<key>Font</key>
+										<string>Avenir-Book</string>
+										<key>Size</key>
+										<real>11</real>
+									</dict>
 									<key>ID</key>
 									<integer>58</integer>
 									<key>Shape</key>
@@ -4265,14 +4506,18 @@ friend operator&lt;&lt; &lt;T&gt;(os: std::ostream&amp;, point: const Point&amp;
 										<integer>0</integer>
 										<key>Text</key>
 										<string>{\rtf1\ansi\ansicpg1252\cocoartf1187\cocoasubrtf340
-\cocoascreenfonts1{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+\cocoascreenfonts1{\fonttbl\f0\fnil\fcharset0 Avenir-Book;}
 {\colortbl;\red255\green255\blue255;}
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720
 
-\f0\fs24 \cf0 -parent: QuadTreeNode*\
+\f0\fs22 \cf0 -parent: QuadTreeNode*\
 -children[4]: QuadTreeNode*\
 -point: Point&lt;T&gt;*\
 -number_of_points: size_t\
+-x: double\
+-y: double\
+-width: double\
+-height: double\
 -level: unsigned\
 -\ul MAX_LEVEL\ulnone : unsigned\ul \
 }</string>
@@ -4284,13 +4529,20 @@ friend operator&lt;&lt; &lt;T&gt;(os: std::ostream&amp;, point: const Point&amp;
 								</dict>
 								<dict>
 									<key>Bounds</key>
-									<string>{{149.72000122070318, 448}, {541.58837890625, 140}}</string>
+									<string>{{149.72007667207112, 457.78431917840953}, {541.58837890625, 120}}</string>
 									<key>Class</key>
 									<string>ShapedGraphic</string>
 									<key>FitText</key>
 									<string>Vertical</string>
 									<key>Flow</key>
 									<string>Resize</string>
+									<key>FontInfo</key>
+									<dict>
+										<key>Font</key>
+										<string>Avenir-Book</string>
+										<key>Size</key>
+										<real>11</real>
+									</dict>
 									<key>ID</key>
 									<integer>59</integer>
 									<key>Shape</key>
@@ -4309,19 +4561,17 @@ friend operator&lt;&lt; &lt;T&gt;(os: std::ostream&amp;, point: const Point&amp;
 										<integer>0</integer>
 										<key>Text</key>
 										<string>{\rtf1\ansi\ansicpg1252\cocoartf1187\cocoasubrtf340
-\cocoascreenfonts1{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+\cocoascreenfonts1{\fonttbl\f0\fnil\fcharset0 Avenir-Book;}
 {\colortbl;\red255\green255\blue255;}
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720
 
-\f0\fs24 \cf0 -QuadTreeNode(width: double, height: double, x: double, y:double, level: unsigned, parent: QuadTreeNode*) \
+\f0\fs22 \cf0 -QuadTreeNode(width: double, height: double, x: double, y:double, level: unsigned, parent: QuadTreeNode*)\
+-\CocoaLigature0 ~QuadTreeNode()\CocoaLigature1 \
 -split()\
 -insert(new_point: Point&lt;T&gt;)\
 +hasData(): bool\
 +getLevel(): unsigned\
-+isLeaf(): bool\
-\
-friend class QuadTree&lt;T&gt;\
-friend operator&lt;&lt; &lt;T&gt;(os: std::ostream&amp;, Node: QuadTreeNode&amp;): std::ostream&amp;}</string>
++isLeaf(): bool}</string>
 										<key>VerticalPad</key>
 										<integer>0</integer>
 									</dict>
@@ -4350,9 +4600,16 @@ friend operator&lt;&lt; &lt;T&gt;(os: std::ostream&amp;, Node: QuadTreeNode&amp;
 					<array>
 						<dict>
 							<key>Bounds</key>
-							<string>{{363.32522636224263, 644.11841218222355}, {41.512872510341616, 23}}</string>
+							<string>{{352.75883270932451, 607.88236427087202}, {51.937984466552734, 23}}</string>
 							<key>Class</key>
 							<string>ShapedGraphic</string>
+							<key>FontInfo</key>
+							<dict>
+								<key>Font</key>
+								<string>Avenir-Book</string>
+								<key>Size</key>
+								<real>11</real>
+							</dict>
 							<key>ID</key>
 							<integer>49</integer>
 							<key>Shape</key>
@@ -4374,11 +4631,11 @@ friend operator&lt;&lt; &lt;T&gt;(os: std::ostream&amp;, Node: QuadTreeNode&amp;
 							<dict>
 								<key>Text</key>
 								<string>{\rtf1\ansi\ansicpg1252\cocoartf1187\cocoasubrtf340
-\cocoascreenfonts1{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+\cocoascreenfonts1{\fonttbl\f0\fnil\fcharset0 Avenir-Book;}
 {\colortbl;\red255\green255\blue255;}
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\qc
 
-\f0\fs24 \cf0 T}</string>
+\f0\fs22 \cf0 T: class}</string>
 								<key>VerticalPad</key>
 								<integer>0</integer>
 							</dict>
@@ -4390,13 +4647,20 @@ friend operator&lt;&lt; &lt;T&gt;(os: std::ostream&amp;, Node: QuadTreeNode&amp;
 							<array>
 								<dict>
 									<key>Bounds</key>
-									<string>{{149.71999584524053, 661.33091595005533}, {240.08256530761719, 14}}</string>
+									<string>{{145.09898573066209, 625.0948669152674}, {240.08258056640625, 17}}</string>
 									<key>Class</key>
 									<string>ShapedGraphic</string>
 									<key>FitText</key>
 									<string>Vertical</string>
 									<key>Flow</key>
 									<string>Resize</string>
+									<key>FontInfo</key>
+									<dict>
+										<key>Font</key>
+										<string>Avenir-Book</string>
+										<key>Size</key>
+										<real>11</real>
+									</dict>
 									<key>ID</key>
 									<integer>51</integer>
 									<key>Shape</key>
@@ -4413,11 +4677,11 @@ friend operator&lt;&lt; &lt;T&gt;(os: std::ostream&amp;, Node: QuadTreeNode&amp;
 									<dict>
 										<key>Text</key>
 										<string>{\rtf1\ansi\ansicpg1252\cocoartf1187\cocoasubrtf340
-\cocoascreenfonts1{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+\cocoascreenfonts1{\fonttbl\f0\fnil\fcharset0 Avenir-Book;}
 {\colortbl;\red255\green255\blue255;\red0\green0\blue255;}
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\qc
 
-\f0\b\fs24 \cf2 QuadTree&lt;T&gt;::terator}</string>
+\f0\fs22 \cf2 QuadTree&lt;T&gt;::terator}</string>
 										<key>VerticalPad</key>
 										<integer>0</integer>
 									</dict>
@@ -4426,13 +4690,20 @@ friend operator&lt;&lt; &lt;T&gt;(os: std::ostream&amp;, Node: QuadTreeNode&amp;
 								</dict>
 								<dict>
 									<key>Bounds</key>
-									<string>{{149.71999584524053, 675.33091595005533}, {240.08256530761719, 14}}</string>
+									<string>{{145.09898573066209, 642.0948669152674}, {240.08258056640625, 17}}</string>
 									<key>Class</key>
 									<string>ShapedGraphic</string>
 									<key>FitText</key>
 									<string>Vertical</string>
 									<key>Flow</key>
 									<string>Resize</string>
+									<key>FontInfo</key>
+									<dict>
+										<key>Font</key>
+										<string>Avenir-Book</string>
+										<key>Size</key>
+										<real>11</real>
+									</dict>
 									<key>ID</key>
 									<integer>52</integer>
 									<key>Shape</key>
@@ -4451,11 +4722,11 @@ friend operator&lt;&lt; &lt;T&gt;(os: std::ostream&amp;, Node: QuadTreeNode&amp;
 										<integer>0</integer>
 										<key>Text</key>
 										<string>{\rtf1\ansi\ansicpg1252\cocoartf1187\cocoasubrtf340
-\cocoascreenfonts1{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+\cocoascreenfonts1{\fonttbl\f0\fnil\fcharset0 Avenir-Book;}
 {\colortbl;\red255\green255\blue255;}
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720
 
-\f0\fs24 \cf0 -Node: QuadTreeNode&lt;T&gt;*}</string>
+\f0\fs22 \cf0 -node: QuadTreeNode&lt;T&gt;*}</string>
 										<key>VerticalPad</key>
 										<integer>0</integer>
 									</dict>
@@ -4464,13 +4735,20 @@ friend operator&lt;&lt; &lt;T&gt;(os: std::ostream&amp;, Node: QuadTreeNode&amp;
 								</dict>
 								<dict>
 									<key>Bounds</key>
-									<string>{{149.71999584524053, 689.33091595005533}, {240.08256530761719, 126}}</string>
+									<string>{{145.09898573066209, 659.0948669152674}, {240.08258056640625, 105}}</string>
 									<key>Class</key>
 									<string>ShapedGraphic</string>
 									<key>FitText</key>
 									<string>Vertical</string>
 									<key>Flow</key>
 									<string>Resize</string>
+									<key>FontInfo</key>
+									<dict>
+										<key>Font</key>
+										<string>Avenir-Book</string>
+										<key>Size</key>
+										<real>11</real>
+									</dict>
 									<key>ID</key>
 									<integer>53</integer>
 									<key>Shape</key>
@@ -4489,18 +4767,13 @@ friend operator&lt;&lt; &lt;T&gt;(os: std::ostream&amp;, Node: QuadTreeNode&amp;
 										<integer>0</integer>
 										<key>Text</key>
 										<string>{\rtf1\ansi\ansicpg1252\cocoartf1187\cocoasubrtf340
-\cocoascreenfonts1{\fonttbl\f0\fswiss\fcharset0 Helvetica;\f1\fmodern\fcharset0 Courier;}
+\cocoascreenfonts1{\fonttbl\f0\fnil\fcharset0 Avenir-Book;}
 {\colortbl;\red255\green255\blue255;}
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720
 
-\f0\fs24 \cf0 +iterator(Node: QuadTreeNode&lt;T&gt;*)\
-+
-\f1 operator*(): 
-\f0 QuadTreeNode&lt;T&gt;
-\f1 &amp;\
-+operator-&gt;(): 
-\f0 QuadTreeNode&lt;T&gt;
-\f1 *\
+\f0\fs22 \cf0 +iterator(Node: QuadTreeNode&lt;T&gt;*)\
++operator*(): QuadTreeNode&lt;T&gt;&amp;\
++operator-&gt;(): QuadTreeNode&lt;T&gt;*\
 +operator++(): iterator&amp;\
 \pard\pardeftab720
 \cf0 +operator++(int): iterator\
@@ -4541,9 +4814,9 @@ friend operator&lt;&lt; &lt;T&gt;(os: std::ostream&amp;, Node: QuadTreeNode&amp;
 							<key>FontInfo</key>
 							<dict>
 								<key>Font</key>
-								<string>Helvetica</string>
+								<string>Avenir-Book</string>
 								<key>Size</key>
-								<real>10</real>
+								<real>11</real>
 							</dict>
 							<key>ID</key>
 							<integer>40</integer>
@@ -4566,11 +4839,11 @@ friend operator&lt;&lt; &lt;T&gt;(os: std::ostream&amp;, Node: QuadTreeNode&amp;
 							<dict>
 								<key>Text</key>
 								<string>{\rtf1\ansi\ansicpg1252\cocoartf1187\cocoasubrtf340
-\cocoascreenfonts1{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+\cocoascreenfonts1{\fonttbl\f0\fnil\fcharset0 Avenir-Book;}
 {\colortbl;\red255\green255\blue255;}
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\qc
 
-\f0\fs24 \cf0 T}</string>
+\f0\fs22 \cf0 T: class}</string>
 								<key>VerticalPad</key>
 								<integer>0</integer>
 							</dict>
@@ -4582,7 +4855,7 @@ friend operator&lt;&lt; &lt;T&gt;(os: std::ostream&amp;, Node: QuadTreeNode&amp;
 							<array>
 								<dict>
 									<key>Bounds</key>
-									<string>{{149.72000122070324, 37.815384615384687}, {542.35357666015625, 14}}</string>
+									<string>{{149.72000122070324, 37.815384615384687}, {542.35357666015625, 17}}</string>
 									<key>Class</key>
 									<string>ShapedGraphic</string>
 									<key>FitText</key>
@@ -4592,9 +4865,9 @@ friend operator&lt;&lt; &lt;T&gt;(os: std::ostream&amp;, Node: QuadTreeNode&amp;
 									<key>FontInfo</key>
 									<dict>
 										<key>Font</key>
-										<string>Helvetica</string>
+										<string>Avenir-Book</string>
 										<key>Size</key>
-										<real>10</real>
+										<real>11</real>
 									</dict>
 									<key>ID</key>
 									<integer>42</integer>
@@ -4612,11 +4885,11 @@ friend operator&lt;&lt; &lt;T&gt;(os: std::ostream&amp;, Node: QuadTreeNode&amp;
 									<dict>
 										<key>Text</key>
 										<string>{\rtf1\ansi\ansicpg1252\cocoartf1187\cocoasubrtf340
-\cocoascreenfonts1{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+\cocoascreenfonts1{\fonttbl\f0\fnil\fcharset0 Avenir-Book;}
 {\colortbl;\red255\green255\blue255;\red0\green0\blue255;}
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\qc
 
-\f0\b\fs24 \cf2 QuadTree}</string>
+\f0\fs22 \cf2 QuadTree}</string>
 										<key>VerticalPad</key>
 										<integer>0</integer>
 									</dict>
@@ -4625,7 +4898,7 @@ friend operator&lt;&lt; &lt;T&gt;(os: std::ostream&amp;, Node: QuadTreeNode&amp;
 								</dict>
 								<dict>
 									<key>Bounds</key>
-									<string>{{149.72000122070324, 51.815384615384687}, {542.35357666015625, 14}}</string>
+									<string>{{149.72000122070324, 54.815384615384687}, {542.35357666015625, 17}}</string>
 									<key>Class</key>
 									<string>ShapedGraphic</string>
 									<key>FitText</key>
@@ -4635,9 +4908,9 @@ friend operator&lt;&lt; &lt;T&gt;(os: std::ostream&amp;, Node: QuadTreeNode&amp;
 									<key>FontInfo</key>
 									<dict>
 										<key>Font</key>
-										<string>Helvetica</string>
+										<string>Avenir-Book</string>
 										<key>Size</key>
-										<real>10</real>
+										<real>11</real>
 									</dict>
 									<key>ID</key>
 									<integer>43</integer>
@@ -4657,11 +4930,11 @@ friend operator&lt;&lt; &lt;T&gt;(os: std::ostream&amp;, Node: QuadTreeNode&amp;
 										<integer>0</integer>
 										<key>Text</key>
 										<string>{\rtf1\ansi\ansicpg1252\cocoartf1187\cocoasubrtf340
-\cocoascreenfonts1{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+\cocoascreenfonts1{\fonttbl\f0\fnil\fcharset0 Avenir-Book;}
 {\colortbl;\red255\green255\blue255;}
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720
 
-\f0\fs24 \cf0 -root: QuadTreeNode*}</string>
+\f0\fs22 \cf0 -root: QuadTreeNode*}</string>
 										<key>VerticalPad</key>
 										<integer>0</integer>
 									</dict>
@@ -4670,7 +4943,7 @@ friend operator&lt;&lt; &lt;T&gt;(os: std::ostream&amp;, Node: QuadTreeNode&amp;
 								</dict>
 								<dict>
 									<key>Bounds</key>
-									<string>{{149.72000122070324, 65.815384615384687}, {542.35357666015625, 210}}</string>
+									<string>{{149.72000122070324, 71.815384615384687}, {542.35357666015625, 165}}</string>
 									<key>Class</key>
 									<string>ShapedGraphic</string>
 									<key>FitText</key>
@@ -4680,9 +4953,9 @@ friend operator&lt;&lt; &lt;T&gt;(os: std::ostream&amp;, Node: QuadTreeNode&amp;
 									<key>FontInfo</key>
 									<dict>
 										<key>Font</key>
-										<string>Helvetica</string>
+										<string>Avenir-Book</string>
 										<key>Size</key>
-										<real>10</real>
+										<real>11</real>
 									</dict>
 									<key>ID</key>
 									<integer>44</integer>
@@ -4702,12 +4975,12 @@ friend operator&lt;&lt; &lt;T&gt;(os: std::ostream&amp;, Node: QuadTreeNode&amp;
 										<integer>0</integer>
 										<key>Text</key>
 										<string>{\rtf1\ansi\ansicpg1252\cocoartf1187\cocoasubrtf340
-\cocoascreenfonts1{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+\cocoascreenfonts1{\fonttbl\f0\fnil\fcharset0 Avenir-Book;}
 {\colortbl;\red255\green255\blue255;}
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720
 
-\f0\fs24 \cf0 +QuadTree(width: double, height: double)\
-+getRootNode(): QuadTreeNode&lt;T&gt;*\
+\f0\fs22 \cf0 +QuadTree(width: double, height: double)\
++\CocoaLigature0 ~QuadTree()\CocoaLigature1 \
 +insert(data: Point&lt;T&gt;)\
 +depth(): unsigned\
 +countNodes(): unsigned\
@@ -4716,11 +4989,7 @@ friend operator&lt;&lt; &lt;T&gt;(os: std::ostream&amp;, Node: QuadTreeNode&amp;
 \
 +iterator: class\
 +begin(): iterator\
-+end(): iterator\
-\
-+friend QuadTreeNode&lt;T&gt;: class\
-+friend operator&lt;&lt;(std::ostream&amp; os, QuadTree&amp; qt): std::ostream&amp;\
-+friend operator&gt;&gt;(is: std::istream&amp;, quadtree: QuadTree&lt;T&gt;): std::istream&amp;}</string>
++end(): iterator}</string>
 										<key>VerticalPad</key>
 										<integer>0</integer>
 									</dict>
@@ -4825,15 +5094,15 @@ friend operator&lt;&lt; &lt;T&gt;(os: std::ostream&amp;, Node: QuadTreeNode&amp;
 		<key>SidebarWidth</key>
 		<integer>120</integer>
 		<key>VisibleRegion</key>
-		<string>{{-62, 409.30233768499619}, {943.41088061106132, 438.7597028971739}}</string>
+		<string>{{-187, 316.66667258817398}, {1193.1372772130271, 554.90197116070112}}</string>
 		<key>Zoom</key>
-		<real>1.2899999618530273</real>
+		<real>1.0199999809265137</real>
 		<key>ZoomValues</key>
 		<array>
 			<array>
 				<string>Iterator</string>
-				<real>1</real>
-				<real>1</real>
+				<real>1.2200000286102295</real>
+				<real>1.1499999761581421</real>
 			</array>
 			<array>
 				<string>Logo</string>
@@ -4852,8 +5121,8 @@ friend operator&lt;&lt; &lt;T&gt;(os: std::ostream&amp;, Node: QuadTreeNode&amp;
 			</array>
 			<array>
 				<string>UML</string>
-				<real>1.2899999618530273</real>
-				<real>1.2100000381469727</real>
+				<real>1.0199999809265137</real>
+				<real>1.0399999618530273</real>
 			</array>
 		</array>
 	</dict>

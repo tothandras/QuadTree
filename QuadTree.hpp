@@ -86,13 +86,22 @@ class QuadTreeNode{
     /// @brief QuadTree és QuadTreeNode hozhat csak létre új csomópontot. (Adat nélkül)
     QuadTreeNode(double width, double height, double x=0, double y=0, unsigned level=1, QuadTreeNode *parent=NULL): parent(parent), children{NULL, NULL, NULL, NULL}, width(width), height(height), x(x), y(y), level(level), point(NULL), number_of_points(0){}
     
+    /// @return A csomópont rendelkezik-e adattal?
+    bool hasData() const{
+        return number_of_points==0 ? false : true;
+    }
+    
     /// @brief Terület felbontása négy egybevágó téglalapra.
     void split();
     
     /// @brief Új pont / adat beszúrása.
     void insert(Point<T> new_point);
 
-public:
+    /// @brief Csomópontról eldönti hogy levél-e.
+    /// @return Levél?
+    bool isLeaf() const{
+        return (children[0]==NULL && children[1]==NULL && children[2]==NULL && children[3]==NULL);
+    }
     
     /// @brief Destruktor.
     ~QuadTreeNode(){
@@ -100,22 +109,8 @@ public:
             delete children[i];
         delete[] point;
     }
-
-    /// @return A csomópont rendelkezik-e adattal?
-    bool hasData() const{
-        return number_of_points==0 ? false : true;
-    }
-    /// @return Melyik szinten van?
-    unsigned getLevel() const{
-        return level;
-    }
+public:
     
-    /// @brief Csomópontról eldönti hogy levél-e.
-    /// @return Levél?
-    bool isLeaf() const{
-        return (children[0]==NULL && children[1]==NULL && children[2]==NULL && children[3]==NULL);
-    }
-
     friend class QuadTree<T>;
     friend std::ostream& operator<< <T>(std::ostream &, const QuadTreeNode &);
 };
@@ -185,7 +180,7 @@ void QuadTreeNode<T>::insert(Point<T> new_point){
     }
 }
 
-/// @brief QuadTree (négy elágazású generikus fa) osztály. A négy elágazású generikus fa QuadTreeNode-okból épül fel.
+/// @brief QuadTree (generikus négy elágazású fa) osztály. A négy elágazású generikus fa QuadTreeNode-okból épül fel.
 template <class T>
 class QuadTree{
     /// Fa gyökerére mutató pointer.
@@ -200,7 +195,7 @@ public:
     ~QuadTree(){delete root;}
     
     /// @return - Gyökérre mutató pointer.
-    QuadTreeNode<T>* getRootNode(){return root;}
+    //QuadTreeNode<T>* getRootNode(){return root;}
     
     /// @brief Új elem beszúrása.
     /// @param Új pont / adat.
