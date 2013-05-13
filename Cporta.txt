@@ -1,0 +1,60 @@
+Successfully compiled memtrace.cpp
+Successfully compiled String.cpp
+In file included from test.cpp:16:
+QuadTree.hpp: In constructor ‘QuadTreeNode<T>::QuadTreeNode(double, double, double, double, unsigned int, QuadTreeNode<T>*)’:
+QuadTree.hpp:88: warning: extended initializer lists only available with -std=c++0x or -std=gnu++0x
+In file included from test.cpp:16:
+QuadTree.hpp: In function ‘std::ostream& operator<<(std::ostream&, const QuadTreeNode<T>&)’:
+QuadTree.hpp:407: warning: name lookup of ‘i’ changed
+QuadTree.hpp:405: warning:   matches this ‘i’ under ISO standard rules
+QuadTree.hpp:406: warning:   matches this ‘i’ under old rules
+In file included from test.cpp:16:
+QuadTree.hpp: In constructor ‘Point<T>::Point(T, double, double) [with T = int]’:
+test.cpp:28:   instantiated from here
+QuadTree.hpp:34: warning: ‘Point<int>::data’ will be initialized after
+QuadTree.hpp:32: warning:   ‘double Point<int>::x’
+QuadTree.hpp:41: warning:   when initialized here
+In file included from test.cpp:16:
+QuadTree.hpp: In constructor ‘QuadTreeNode<T>::QuadTreeNode(double, double, double, double, unsigned int, QuadTreeNode<T>*) [with T = int]’:
+QuadTree.hpp:192:   instantiated from ‘QuadTree<T>::QuadTree(double, double) [with T = int]’
+test.cpp:23:   instantiated from here
+QuadTree.hpp:76: warning: ‘QuadTreeNode<int>::height’ will be initialized after
+QuadTree.hpp:76: warning:   ‘double QuadTreeNode<int>::x’
+QuadTree.hpp:88: warning:   when initialized here
+QuadTree.hpp:79: warning: ‘QuadTreeNode<int>::level’ will be initialized after
+QuadTree.hpp:70: warning:   ‘Point<int>* QuadTreeNode<int>::point’
+QuadTree.hpp:88: warning:   when initialized here
+QuadTree.hpp: In constructor ‘QuadTreeNode<T>::QuadTreeNode(double, double, double, double, unsigned int, QuadTreeNode<T>*) [with T = char]’:
+QuadTree.hpp:192:   instantiated from ‘QuadTree<T>::QuadTree(double, double) [with T = char]’
+test.cpp:59:   instantiated from here
+QuadTree.hpp:76: warning: ‘QuadTreeNode<char>::height’ will be initialized after
+QuadTree.hpp:76: warning:   ‘double QuadTreeNode<char>::x’
+QuadTree.hpp:88: warning:   when initialized here
+QuadTree.hpp:79: warning: ‘QuadTreeNode<char>::level’ will be initialized after
+QuadTree.hpp:70: warning:   ‘Point<char>* QuadTreeNode<char>::point’
+QuadTree.hpp:88: warning:   when initialized here
+QuadTree.hpp: In constructor ‘QuadTreeNode<T>::QuadTreeNode(double, double, double, double, unsigned int, QuadTreeNode<T>*) [with T = String]’:
+QuadTree.hpp:192:   instantiated from ‘QuadTree<T>::QuadTree(double, double) [with T = String]’
+test.cpp:60:   instantiated from here
+QuadTree.hpp:76: warning: ‘QuadTreeNode<String>::height’ will be initialized after
+QuadTree.hpp:76: warning:   ‘double QuadTreeNode<String>::x’
+QuadTree.hpp:88: warning:   when initialized here
+QuadTree.hpp:79: warning: ‘QuadTreeNode<String>::level’ will be initialized after
+QuadTree.hpp:70: warning:   ‘Point<String>* QuadTreeNode<String>::point’
+QuadTree.hpp:88: warning:   when initialized here
+In file included from test.cpp:16:
+QuadTree.hpp: In constructor ‘Point<T>::Point(T, double, double) [with T = char]’:
+QuadTree.hpp:249:   instantiated from ‘std::istream& operator>>(std::istream&, QuadTree<char>&)’
+test.cpp:65:   instantiated from here
+QuadTree.hpp:34: warning: ‘Point<char>::data’ will be initialized after
+QuadTree.hpp:32: warning:   ‘double Point<char>::x’
+QuadTree.hpp:41: warning:   when initialized here
+QuadTree.hpp: In constructor ‘Point<T>::Point(T, double, double) [with T = String]’:
+QuadTree.hpp:249:   instantiated from ‘std::istream& operator>>(std::istream&, QuadTree<String>&)’
+test.cpp:69:   instantiated from here
+QuadTree.hpp:34: warning: ‘Point<String>::data’ will be initialized after
+QuadTree.hpp:32: warning:   ‘double Point<String>::x’
+QuadTree.hpp:41: warning:   when initialized here
+Successfully compiled test.cpp
+Successfully compiled all files
+Successfully linked all files together

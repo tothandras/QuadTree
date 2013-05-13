@@ -1,0 +1,47 @@
+\select@language {magyar}
+\contentsline {chapter}{\numberline {1.}N\discretionary {-}{}{}H\discretionary {-}{}{}F 2013 -\/ Quad\discretionary {-}{}{}Tree (N\IeC {\'e}gy el\IeC {\'a}gaz\IeC {\'a}s\IeC {\'u} dupl\IeC {\'a}n l\IeC {\'a}ncolt generikus fa)}{1}{chapter*.1}
+\contentsline {chapter}{\numberline {2.}Oszt\IeC {\'a}lymutat\IeC {\'o}}{3}{chapter*.1}
+\contentsline {section}{\numberline {2.1.}Oszt\IeC {\'a}lylista}{3}{section*.2}
+\contentsline {chapter}{\numberline {3.}F\IeC {\'a}jlmutat\IeC {\'o}}{5}{section*.2}
+\contentsline {section}{\numberline {3.1.}F\IeC {\'a}jllista}{5}{section*.3}
+\contentsline {chapter}{\numberline {4.}Oszt\IeC {\'a}lyok dokument\IeC {\'a}ci\IeC {\'o}ja}{7}{section*.3}
+\contentsline {section}{\numberline {4.1.}Quad\discretionary {-}{}{}Tree$<$ T $>$\discretionary {-}{}{}:\discretionary {-}{}{}:iterator oszt\IeC {\'a}lyreferencia}{7}{section*.4}
+\contentsline {subsection}{\numberline {4.1.1.}R\IeC {\'e}szletes le\IeC {\'\i }r\IeC {\'a}s}{7}{section*.4}
+\contentsline {subsection}{\numberline {4.1.2.}Tagf\IeC {\"u}ggv\IeC {\'e}nyek dokument\IeC {\'a}ci\IeC {\'o}ja}{7}{section*.4}
+\contentsline {subsubsection}{\numberline {4.1.2.1.}operator!=}{7}{section*.5}
+\contentsline {subsubsection}{\numberline {4.1.2.2.}operator++}{8}{section*.5}
+\contentsline {subsubsection}{\numberline {4.1.2.3.}operator==}{8}{section*.5}
+\contentsline {section}{\numberline {4.2.}Point$<$ T $>$ oszt\IeC {\'a}lysablon-\/referencia}{8}{section*.5}
+\contentsline {subsection}{\numberline {4.2.1.}R\IeC {\'e}szletes le\IeC {\'\i }r\IeC {\'a}s}{9}{section*.6}
+\contentsline {section}{\numberline {4.3.}Quad\discretionary {-}{}{}Tree$<$ T $>$ oszt\IeC {\'a}lysablon-\/referencia}{9}{section*.6}
+\contentsline {subsection}{\numberline {4.3.1.}R\IeC {\'e}szletes le\IeC {\'\i }r\IeC {\'a}s}{9}{section*.7}
+\contentsline {subsection}{\numberline {4.3.2.}Tagf\IeC {\"u}ggv\IeC {\'e}nyek dokument\IeC {\'a}ci\IeC {\'o}ja}{10}{section*.7}
+\contentsline {subsubsection}{\numberline {4.3.2.1.}begin}{10}{section*.8}
+\contentsline {subsubsection}{\numberline {4.3.2.2.}count\discretionary {-}{}{}Nodes}{10}{section*.8}
+\contentsline {subsubsection}{\numberline {4.3.2.3.}depth}{10}{section*.8}
+\contentsline {subsubsection}{\numberline {4.3.2.4.}end}{10}{section*.8}
+\contentsline {subsubsection}{\numberline {4.3.2.5.}find}{10}{section*.8}
+\contentsline {subsubsection}{\numberline {4.3.2.6.}find}{10}{section*.8}
+\contentsline {subsubsection}{\numberline {4.3.2.7.}insert}{11}{section*.8}
+\contentsline {section}{\numberline {4.4.}Quad\discretionary {-}{}{}Tree\discretionary {-}{}{}Node$<$ T $>$ oszt\IeC {\'a}lysablon-\/referencia}{11}{section*.8}
+\contentsline {subsection}{\numberline {4.4.1.}R\IeC {\'e}szletes le\IeC {\'\i }r\IeC {\'a}s}{11}{section*.9}
+\contentsline {section}{\numberline {4.5.}String oszt\IeC {\'a}lyreferencia}{11}{section*.9}
+\contentsline {subsection}{\numberline {4.5.1.}R\IeC {\'e}szletes le\IeC {\'\i }r\IeC {\'a}s}{12}{section*.10}
+\contentsline {subsection}{\numberline {4.5.2.}Konstruktorok \IeC {\'e}s destruktorok dokument\IeC {\'a}ci\IeC {\'o}ja}{12}{section*.10}
+\contentsline {subsubsection}{\numberline {4.5.2.1.}String}{12}{section*.11}
+\contentsline {subsubsection}{\numberline {4.5.2.2.}String}{12}{section*.11}
+\contentsline {subsubsection}{\numberline {4.5.2.3.}String}{13}{section*.11}
+\contentsline {subsection}{\numberline {4.5.3.}Tagf\IeC {\"u}ggv\IeC {\'e}nyek dokument\IeC {\'a}ci\IeC {\'o}ja}{13}{section*.11}
+\contentsline {subsubsection}{\numberline {4.5.3.1.}c\discretionary {-}{}{}\_\discretionary {-}{}{}str}{13}{section*.12}
+\contentsline {subsubsection}{\numberline {4.5.3.2.}operator+}{13}{section*.12}
+\contentsline {subsubsection}{\numberline {4.5.3.3.}operator=}{13}{section*.12}
+\contentsline {subsubsection}{\numberline {4.5.3.4.}operator[]}{13}{section*.12}
+\contentsline {subsubsection}{\numberline {4.5.3.5.}operator[]}{14}{section*.12}
+\contentsline {subsection}{\numberline {4.5.4.}Bar\IeC {\'a}t \IeC {\'e}s kapcsol\IeC {\'o}d\IeC {\'o} f\IeC {\"u}ggv\IeC {\'e}nyek dokument\IeC {\'a}ci\IeC {\'o}ja}{14}{section*.12}
+\contentsline {subsubsection}{\numberline {4.5.4.1.}operator$<$$<$}{14}{section*.13}
+\contentsline {subsubsection}{\numberline {4.5.4.2.}operator$>$$>$}{14}{section*.13}
+\contentsline {chapter}{\numberline {5.}F\IeC {\'a}jlok dokument\IeC {\'a}ci\IeC {\'o}ja}{15}{section*.13}
+\contentsline {section}{\numberline {5.1.}Quad\discretionary {-}{}{}Tree.\discretionary {-}{}{}hpp f\IeC {\'a}jlreferencia}{15}{section*.14}
+\contentsline {subsection}{\numberline {5.1.1.}F\IeC {\"u}ggv\IeC {\'e}nyek dokument\IeC {\'a}ci\IeC {\'o}ja}{16}{section*.14}
+\contentsline {subsubsection}{\numberline {5.1.1.1.}operator$<$$<$}{16}{section*.15}
+\contentsline {part}{T\IeC {\'a}rgymutat\IeC {\'o}}{16}{section*.15}

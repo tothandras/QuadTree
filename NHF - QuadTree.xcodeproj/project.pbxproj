@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0D0BABBB173ECFF700DA79C8 /* String.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0D0BABBA173ECFF700DA79C8 /* String.cpp */; };
 		0D5199D31739960200A0115C /* test.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0D5199D21739960200A0115C /* test.cpp */; };
 /* End PBXBuildFile section */
 
@@ -23,6 +24,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		0D0BABB9173ECFDD00DA79C8 /* String.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = String.h; sourceTree = "<group>"; };
+		0D0BABBA173ECFF700DA79C8 /* String.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = String.cpp; sourceTree = "<group>"; };
 		0D31FB991718700700499F11 /* QuadTree.hpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.h; fileEncoding = 4; path = QuadTree.hpp; sourceTree = "<group>"; };
 		0D5199D21739960200A0115C /* test.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = test.cpp; sourceTree = "<group>"; };
 		0D5F7C83173CF64C007AADE9 /* NHF - QuadTree */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "NHF - QuadTree"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -44,6 +47,8 @@
 			children = (
 				0D31FB991718700700499F11 /* QuadTree.hpp */,
 				0D5199D21739960200A0115C /* test.cpp */,
+				0D0BABB9173ECFDD00DA79C8 /* String.h */,
+				0D0BABBA173ECFF700DA79C8 /* String.cpp */,
 				0D5F7C83173CF64C007AADE9 /* NHF - QuadTree */,
 			);
 			sourceTree = "<group>";
@@ -100,6 +105,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0D5199D31739960200A0115C /* test.cpp in Sources */,
+				0D0BABBB173ECFF700DA79C8 /* String.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

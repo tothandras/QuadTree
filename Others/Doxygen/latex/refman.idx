@@ -1,0 +1,48 @@
+\indexentry{Quad\discretionary {-}{}{}Tree$<$ T $>$\discretionary {-}{}{}::iterator@{Quad\discretionary {-}{}{}Tree$<$ T $>$\discretionary {-}{}{}::iterator}|hyperpage}{7}
+\indexentry{Quad\discretionary {-}{}{}Tree\discretionary {-}{}{}::iterator@{Quad\discretionary {-}{}{}Tree\discretionary {-}{}{}::iterator}!operator!=@{operator!=}|hyperpage}{7}
+\indexentry{operator!=@{operator!=}!QuadTree::iterator@{Quad\discretionary {-}{}{}Tree\discretionary {-}{}{}::iterator}|hyperpage}{7}
+\indexentry{Quad\discretionary {-}{}{}Tree\discretionary {-}{}{}::iterator@{Quad\discretionary {-}{}{}Tree\discretionary {-}{}{}::iterator}!operator++@{operator++}|hyperpage}{7}
+\indexentry{operator++@{operator++}!QuadTree::iterator@{Quad\discretionary {-}{}{}Tree\discretionary {-}{}{}::iterator}|hyperpage}{7}
+\indexentry{Quad\discretionary {-}{}{}Tree\discretionary {-}{}{}::iterator@{Quad\discretionary {-}{}{}Tree\discretionary {-}{}{}::iterator}!operator==@{operator==}|hyperpage}{8}
+\indexentry{operator==@{operator==}!QuadTree::iterator@{Quad\discretionary {-}{}{}Tree\discretionary {-}{}{}::iterator}|hyperpage}{8}
+\indexentry{Point$<$ T $>$@{Point$<$ T $>$}|hyperpage}{8}
+\indexentry{Quad\discretionary {-}{}{}Tree$<$ T $>$@{Quad\discretionary {-}{}{}Tree$<$ T $>$}|hyperpage}{9}
+\indexentry{Quad\discretionary {-}{}{}Tree@{Quad\discretionary {-}{}{}Tree}!begin@{begin}|hyperpage}{10}
+\indexentry{begin@{begin}!QuadTree@{Quad\discretionary {-}{}{}Tree}|hyperpage}{10}
+\indexentry{Quad\discretionary {-}{}{}Tree@{Quad\discretionary {-}{}{}Tree}!count\discretionary {-}{}{}Nodes@{count\discretionary {-}{}{}Nodes}|hyperpage}{10}
+\indexentry{count\discretionary {-}{}{}Nodes@{count\discretionary {-}{}{}Nodes}!QuadTree@{Quad\discretionary {-}{}{}Tree}|hyperpage}{10}
+\indexentry{Quad\discretionary {-}{}{}Tree@{Quad\discretionary {-}{}{}Tree}!depth@{depth}|hyperpage}{10}
+\indexentry{depth@{depth}!QuadTree@{Quad\discretionary {-}{}{}Tree}|hyperpage}{10}
+\indexentry{Quad\discretionary {-}{}{}Tree@{Quad\discretionary {-}{}{}Tree}!end@{end}|hyperpage}{10}
+\indexentry{end@{end}!QuadTree@{Quad\discretionary {-}{}{}Tree}|hyperpage}{10}
+\indexentry{Quad\discretionary {-}{}{}Tree@{Quad\discretionary {-}{}{}Tree}!find@{find}|hyperpage}{10}
+\indexentry{find@{find}!QuadTree@{Quad\discretionary {-}{}{}Tree}|hyperpage}{10}
+\indexentry{Quad\discretionary {-}{}{}Tree@{Quad\discretionary {-}{}{}Tree}!find@{find}|hyperpage}{10}
+\indexentry{find@{find}!QuadTree@{Quad\discretionary {-}{}{}Tree}|hyperpage}{10}
+\indexentry{Quad\discretionary {-}{}{}Tree@{Quad\discretionary {-}{}{}Tree}!insert@{insert}|hyperpage}{11}
+\indexentry{insert@{insert}!QuadTree@{Quad\discretionary {-}{}{}Tree}|hyperpage}{11}
+\indexentry{Quad\discretionary {-}{}{}Tree\discretionary {-}{}{}Node$<$ T $>$@{Quad\discretionary {-}{}{}Tree\discretionary {-}{}{}Node$<$ T $>$}|hyperpage}{11}
+\indexentry{String@{String}|hyperpage}{11}
+\indexentry{String@{String}!String@{String}|hyperpage}{12}
+\indexentry{String@{String}!String@{String}|hyperpage}{12}
+\indexentry{String@{String}!String@{String}|hyperpage}{12}
+\indexentry{String@{String}!String@{String}|hyperpage}{12}
+\indexentry{String@{String}!String@{String}|hyperpage}{13}
+\indexentry{String@{String}!String@{String}|hyperpage}{13}
+\indexentry{String@{String}!c\discretionary {-}{}{}\_\discretionary {-}{}{}str@{c\discretionary {-}{}{}\_\discretionary {-}{}{}str}|hyperpage}{13}
+\indexentry{c\discretionary {-}{}{}\_\discretionary {-}{}{}str@{c\discretionary {-}{}{}\_\discretionary {-}{}{}str}!String@{String}|hyperpage}{13}
+\indexentry{String@{String}!operator+@{operator+}|hyperpage}{13}
+\indexentry{operator+@{operator+}!String@{String}|hyperpage}{13}
+\indexentry{String@{String}!operator=@{operator=}|hyperpage}{13}
+\indexentry{operator=@{operator=}!String@{String}|hyperpage}{13}
+\indexentry{String@{String}!operator\unhbox \voidb@x \hbox {[}$\,$\unhbox \voidb@x \hbox {]}@{operator[]}|hyperpage}{13}
+\indexentry{operator\unhbox \voidb@x \hbox {[}$\,$\unhbox \voidb@x \hbox {]}@{operator[]}!String@{String}|hyperpage}{13}
+\indexentry{String@{String}!operator\unhbox \voidb@x \hbox {[}$\,$\unhbox \voidb@x \hbox {]}@{operator[]}|hyperpage}{14}
+\indexentry{operator\unhbox \voidb@x \hbox {[}$\,$\unhbox \voidb@x \hbox {]}@{operator[]}!String@{String}|hyperpage}{14}
+\indexentry{String@{String}!operator$<$$<$@{operator$<$$<$}|hyperpage}{14}
+\indexentry{operator$<$$<$@{operator$<$$<$}!String@{String}|hyperpage}{14}
+\indexentry{String@{String}!operator$>$$>$@{operator$>$$>$}|hyperpage}{14}
+\indexentry{operator$>$$>$@{operator$>$$>$}!String@{String}|hyperpage}{14}
+\indexentry{Quad\discretionary {-}{}{}Tree.\discretionary {-}{}{}hpp@{Quad\discretionary {-}{}{}Tree.\discretionary {-}{}{}hpp}|hyperpage}{15}
+\indexentry{Quad\discretionary {-}{}{}Tree.\discretionary {-}{}{}hpp@{Quad\discretionary {-}{}{}Tree.\discretionary {-}{}{}hpp}!operator$<$$<$@{operator$<$$<$}|hyperpage}{16}
+\indexentry{operator$<$$<$@{operator$<$$<$}!QuadTree.hpp@{Quad\discretionary {-}{}{}Tree.\discretionary {-}{}{}hpp}|hyperpage}{16}

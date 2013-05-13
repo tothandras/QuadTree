@@ -1,3 +1,4 @@
+/// @file QuadTree.hpp
 /// @mainpage NHF 2013 - QuadTree (Négy elágazású duplán láncolt generikus fa)
 /// Feladat kiírás:
 /// Készítsen GENERIKUS duplán láncolt 4 elágazású fát (quad-tree)!
@@ -96,7 +97,7 @@ class QuadTreeNode{
     
     /// @brief Új pont / adat beszúrása.
     void insert(Point<T> new_point);
-
+    
     /// @brief Csomópontról eldönti hogy levél-e.
     /// @return Levél?
     bool isLeaf() const{
@@ -248,7 +249,7 @@ public:
             quadtree.insert(Point<T>(data, x, y));
         }
         return is;
-        }
+    }
 };
 
 /// @brief Fa mélységének visszaadása.
@@ -273,10 +274,10 @@ Point<T>& QuadTree<T>::find(Point<T> point){
     while (!temp->isLeaf()){
         size_t i=3;
         if (point.x <= temp->x+temp->width/2 && point.y > temp->y+temp->height/2) i=0;
-            else if (point.x > temp->x+temp->width/2 && point.y >= temp->y+temp->height/2) i=1;
-                else if (point.x > temp->x+temp->width/2 && point.y <= temp->y+temp->height/2) i=2;
-                    temp=temp->children[i];
-                    }
+        else if (point.x > temp->x+temp->width/2 && point.y >= temp->y+temp->height/2) i=1;
+        else if (point.x > temp->x+temp->width/2 && point.y <= temp->y+temp->height/2) i=2;
+        temp=temp->children[i];
+    }
     for (size_t i=0; i<temp->number_of_points; ++i)
         if (point==temp->point[i]) return temp->point[i];
     throw "Point not found";
@@ -291,7 +292,7 @@ Point<T>& QuadTree<T>::find(T data){
         for (size_t i=0; i<iter->number_of_points; ++i)
             if (iter->point[i].data==data)
                 return find(Point<T>(data, iter->point[0].x, iter->point[0].y));
-                throw "Point not found";
+    throw "Point not found";
 }
 
 template <class T>

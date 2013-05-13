@@ -1,0 +1,131 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.3.1"/>
+<title>Dokumentáció: String.h Forrásfájl</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">Dokumentáció
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Készítette Doxygen 1.8.3.1 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Keresés');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Főoldal</span></a></li>
+      <li><a href="annotated.html"><span>Osztályok</span></a></li>
+      <li class="current"><a href="files.html"><span>Fájl</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Keresés" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Fájllista</span></a></li>
+      <li><a href="globals.html"><span>Fájlelemek</span></a></li>
+    </ul>
+  </div>
+</div><!-- top -->
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Összes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Osztályok</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Fájl</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Függvények</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Barátok</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Oldal</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">String.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#ifndef STRING_H</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define STRING_H</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &lt;iostream&gt;</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;</div>
+<div class="line"><a name="l00012"></a><span class="lineno"><a class="code" href="class_string.html">   12</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_string.html" title="String osztály. A &#39;pData&#39;-ban vannak a karakterek (a lezáró nullával együtt), &#39;len&#39; a hossza...">String</a> {</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    <span class="keywordtype">char</span> *pData;</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> len;</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <a class="code" href="class_string.html#a62a77180f8df2547e8be1313654abcee" title="Konstruktor: egy karakterből.">String</a>(<span class="keywordtype">char</span> ch);</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    </div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <a class="code" href="class_string.html#a62a77180f8df2547e8be1313654abcee" title="Konstruktor: egy karakterből.">String</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* p = <span class="stringliteral">&quot;&quot;</span>);</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    </div>
+<div class="line"><a name="l00026"></a><span class="lineno"><a class="code" href="class_string.html#a4d236d8f9b907db1822064fe0037e267">   26</a></span>&#160;    <span class="keyword">const</span> <span class="keywordtype">char</span>* <a class="code" href="class_string.html#a4d236d8f9b907db1822064fe0037e267" title="C stringet ad vissza.">c_str</a>()<span class="keyword"> const </span>{</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;        <span class="keywordflow">return</span> pData;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    }</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    </div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <a class="code" href="class_string.html#a62a77180f8df2547e8be1313654abcee" title="Konstruktor: egy karakterből.">String</a>(<span class="keyword">const</span> <a class="code" href="class_string.html" title="String osztály. A &#39;pData&#39;-ban vannak a karakterek (a lezáró nullával együtt), &#39;len&#39; a hossza...">String</a>&amp; s1);</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    </div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <a class="code" href="class_string.html#ac40b2a3fb58c2d8556f5e6ff73510036" title="Destruktor.">~String</a>();</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    </div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <a class="code" href="class_string.html" title="String osztály. A &#39;pData&#39;-ban vannak a karakterek (a lezáró nullával együtt), &#39;len&#39; a hossza...">String</a>&amp; <a class="code" href="class_string.html#a803e6112834d4c0cdb0da6c6a4000e6e">operator=</a>(<span class="keyword">const</span> <a class="code" href="class_string.html" title="String osztály. A &#39;pData&#39;-ban vannak a karakterek (a lezáró nullával együtt), &#39;len&#39; a hossza...">String</a>&amp; rhs_s);</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    </div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <a class="code" href="class_string.html" title="String osztály. A &#39;pData&#39;-ban vannak a karakterek (a lezáró nullával együtt), &#39;len&#39; a hossza...">String</a> <a class="code" href="class_string.html#a189071e4e59316603d720413ea166c77" title="Két Stringet összefűz.">operator+</a>(<span class="keyword">const</span> <a class="code" href="class_string.html" title="String osztály. A &#39;pData&#39;-ban vannak a karakterek (a lezáró nullával együtt), &#39;len&#39; a hossza...">String</a>&amp; rhs_s) <span class="keyword">const</span> ;</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    </div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <span class="keywordtype">char</span>&amp; <a class="code" href="class_string.html#a1a7c5c39d4dafbbf8516f5058a253f1a" title="A string egy megadott indexű elemének referenciájával tér vissza.">operator[]</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> idx);</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    </div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">char</span>&amp; <a class="code" href="class_string.html#a1a7c5c39d4dafbbf8516f5058a253f1a" title="A string egy megadott indexű elemének referenciájával tér vissza.">operator[]</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> idx) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    </div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    <span class="keyword">friend</span> std::ostream&amp; <a class="code" href="class_string.html#aef14876e55f43fb4ffa7b91664467ecb" title="Kiíró operátor.">operator&lt;&lt;</a>(std::ostream&amp; os, <span class="keyword">const</span> <a class="code" href="class_string.html" title="String osztály. A &#39;pData&#39;-ban vannak a karakterek (a lezáró nullával együtt), &#39;len&#39; a hossza...">String</a>&amp; s0);</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    </div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    <span class="keyword">friend</span> std::istream&amp; <a class="code" href="class_string.html#aea8ed420ad5e70828bc42b0fb9b49366" title="Beolvas az istream-ről egy szót egy String-be.">operator&gt;&gt;</a>(std::istream&amp; is, <a class="code" href="class_string.html" title="String osztály. A &#39;pData&#39;-ban vannak a karakterek (a lezáró nullával együtt), &#39;len&#39; a hossza...">String</a>&amp; s0);</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;};</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;<span class="preprocessor">#endif</span></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Projekt: Dokumentáció Készült: Sun May 12 2013 15:33:53 Készítette:  &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.3.1
+</small></address>
+</body>
+</html>

@@ -1,0 +1,242 @@
+\hypertarget{class_string}{\section{String osztályreferencia}
+\label{class_string}\index{String@{String}}
+}
+
+
+\hyperlink{class_string}{String} osztály. A 'p\-Data'-\/ban vannak a karakterek (a lezáró nullával együtt), 'len' a hossza. A hosszba nem számít bele a lezáró nulla.  
+
+
+
+
+{\ttfamily \#include $<$String.\-h$>$}
+
+\subsection*{Publikus tagfüggvények}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_string_a62a77180f8df2547e8be1313654abcee}{String} (char ch)
+\begin{DoxyCompactList}\small\item\em Konstruktor\-: egy karakterből. \end{DoxyCompactList}\item 
+\hyperlink{class_string_a50babe8c612a7978a61118a220517e6b}{String} (const char $\ast$p=\char`\"{}\char`\"{})
+\begin{DoxyCompactList}\small\item\em Konstruktor\-: egy egy nullával lezárt char sorozatból, ez a default konstruktor is. \end{DoxyCompactList}\item 
+const char $\ast$ \hyperlink{class_string_a4d236d8f9b907db1822064fe0037e267}{c\-\_\-str} () const 
+\begin{DoxyCompactList}\small\item\em C stringet ad vissza. \end{DoxyCompactList}\item 
+\hyperlink{class_string_a3c682dc983b45bdbb7f3858fe4cbf221}{String} (const \hyperlink{class_string}{String} \&s1)
+\begin{DoxyCompactList}\small\item\em Másoló konstruktor. \end{DoxyCompactList}\item 
+\hypertarget{class_string_ac40b2a3fb58c2d8556f5e6ff73510036}{\hyperlink{class_string_ac40b2a3fb58c2d8556f5e6ff73510036}{$\sim$\-String} ()}\label{class_string_ac40b2a3fb58c2d8556f5e6ff73510036}
+
+\begin{DoxyCompactList}\small\item\em Destruktor. \end{DoxyCompactList}\item 
+\hyperlink{class_string}{String} \& \hyperlink{class_string_a803e6112834d4c0cdb0da6c6a4000e6e}{operator=} (const \hyperlink{class_string}{String} \&rhs\-\_\-s)
+\item 
+\hyperlink{class_string}{String} \hyperlink{class_string_a189071e4e59316603d720413ea166c77}{operator+} (const \hyperlink{class_string}{String} \&rhs\-\_\-s) const 
+\begin{DoxyCompactList}\small\item\em Két Stringet összefűz. \end{DoxyCompactList}\item 
+char \& \hyperlink{class_string_a1a7c5c39d4dafbbf8516f5058a253f1a}{operator\mbox{[}$\,$\mbox{]}} (unsigned int idx)
+\begin{DoxyCompactList}\small\item\em A string egy megadott indexű elemének referenciájával tér vissza. \end{DoxyCompactList}\item 
+const char \& \hyperlink{class_string_aa2cd8e755a2bc70e8ad11708a154d7a3}{operator\mbox{[}$\,$\mbox{]}} (unsigned int idx) const 
+\begin{DoxyCompactList}\small\item\em A string egy megadott indexű elemének referenciájával tér vissza. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Barátok}
+\begin{DoxyCompactItemize}
+\item 
+std\-::ostream \& \hyperlink{class_string_aef14876e55f43fb4ffa7b91664467ecb}{operator$<$$<$} (std\-::ostream \&os, const \hyperlink{class_string}{String} \&s0)
+\begin{DoxyCompactList}\small\item\em Kiíró operátor. \end{DoxyCompactList}\item 
+std\-::istream \& \hyperlink{class_string_aea8ed420ad5e70828bc42b0fb9b49366}{operator$>$$>$} (std\-::istream \&is, \hyperlink{class_string}{String} \&s0)
+\begin{DoxyCompactList}\small\item\em Beolvas az istream-\/ről egy szót egy String-\/be. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Részletes leírás}
+\hyperlink{class_string}{String} osztály. A 'p\-Data'-\/ban vannak a karakterek (a lezáró nullával együtt), 'len' a hossza. A hosszba nem számít bele a lezáró nulla. 
+
+\hyperlink{class_string}{String} osztály deklarációja. \begin{DoxyAuthor}{Szerző}
+Tóth András (O8\-P\-O\-U\-A) 
+\end{DoxyAuthor}
+
+
+\subsection{Konstruktorok és destruktorok dokumentációja}
+\hypertarget{class_string_a62a77180f8df2547e8be1313654abcee}{\index{String@{String}!String@{String}}
+\index{String@{String}!String@{String}}
+\subsubsection[{String}]{\setlength{\rightskip}{0pt plus 5cm}String\-::\-String (
+\begin{DoxyParamCaption}
+\item[{char}]{ch}
+\end{DoxyParamCaption}
+)}}\label{class_string_a62a77180f8df2547e8be1313654abcee}
+
+
+Konstruktor\-: egy karakterből. 
+
+
+\begin{DoxyParams}{Paraméterek}
+{\em Ch} & egy karakter. \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_string_a50babe8c612a7978a61118a220517e6b}{\index{String@{String}!String@{String}}
+\index{String@{String}!String@{String}}
+\subsubsection[{String}]{\setlength{\rightskip}{0pt plus 5cm}String\-::\-String (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{p = {\ttfamily \char`\"{}\char`\"{}}}
+\end{DoxyParamCaption}
+)}}\label{class_string_a50babe8c612a7978a61118a220517e6b}
+
+
+Konstruktor\-: egy egy nullával lezárt char sorozatból, ez a default konstruktor is. 
+
+
+\begin{DoxyParams}{Paraméterek}
+{\em p} & Pointer a C stringre. \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_string_a3c682dc983b45bdbb7f3858fe4cbf221}{\index{String@{String}!String@{String}}
+\index{String@{String}!String@{String}}
+\subsubsection[{String}]{\setlength{\rightskip}{0pt plus 5cm}String\-::\-String (
+\begin{DoxyParamCaption}
+\item[{const {\bf String} \&}]{s1}
+\end{DoxyParamCaption}
+)}}\label{class_string_a3c682dc983b45bdbb7f3858fe4cbf221}
+
+
+Másoló konstruktor. 
+
+
+\begin{DoxyParams}{Paraméterek}
+{\em s1} & \hyperlink{class_string}{String}, amiből létrehozzuk az új String-\/et. \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Tagfüggvények dokumentációja}
+\hypertarget{class_string_a4d236d8f9b907db1822064fe0037e267}{\index{String@{String}!c\-\_\-str@{c\-\_\-str}}
+\index{c\-\_\-str@{c\-\_\-str}!String@{String}}
+\subsubsection[{c\-\_\-str}]{\setlength{\rightskip}{0pt plus 5cm}const char$\ast$ String\-::c\-\_\-str (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_string_a4d236d8f9b907db1822064fe0037e267}
+
+
+C stringet ad vissza. 
+
+\begin{DoxyReturn}{Visszatérési érték}
+Nullával lezárt karaktersorozatra mutató pointer. 
+\end{DoxyReturn}
+\hypertarget{class_string_a189071e4e59316603d720413ea166c77}{\index{String@{String}!operator+@{operator+}}
+\index{operator+@{operator+}!String@{String}}
+\subsubsection[{operator+}]{\setlength{\rightskip}{0pt plus 5cm}{\bf String} String\-::operator+ (
+\begin{DoxyParamCaption}
+\item[{const {\bf String} \&}]{rhs\-\_\-s}
+\end{DoxyParamCaption}
+) const}}\label{class_string_a189071e4e59316603d720413ea166c77}
+
+
+Két Stringet összefűz. 
+
+
+\begin{DoxyParams}{Paraméterek}
+{\em rhs\-\_\-s} & jobboldali \hyperlink{class_string}{String}. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Visszatérési érték}
+Új \hyperlink{class_string}{String}, ami tartalmazza a két stringet egymás után. 
+\end{DoxyReturn}
+\hypertarget{class_string_a803e6112834d4c0cdb0da6c6a4000e6e}{\index{String@{String}!operator=@{operator=}}
+\index{operator=@{operator=}!String@{String}}
+\subsubsection[{operator=}]{\setlength{\rightskip}{0pt plus 5cm}{\bf String} \& String\-::operator= (
+\begin{DoxyParamCaption}
+\item[{const {\bf String} \&}]{rhs\-\_\-s}
+\end{DoxyParamCaption}
+)}}\label{class_string_a803e6112834d4c0cdb0da6c6a4000e6e}
+
+\begin{DoxyParams}{Paraméterek}
+{\em rhs\-\_\-s} & jobboldali \hyperlink{class_string}{String}. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Visszatérési érték}
+Baoldali string. 
+\end{DoxyReturn}
+\hypertarget{class_string_a1a7c5c39d4dafbbf8516f5058a253f1a}{\index{String@{String}!operator\mbox{[}$\,$\mbox{]}@{operator[]}}
+\index{operator\mbox{[}$\,$\mbox{]}@{operator[]}!String@{String}}
+\subsubsection[{operator[]}]{\setlength{\rightskip}{0pt plus 5cm}char \& String\-::operator\mbox{[}$\,$\mbox{]} (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{idx}
+\end{DoxyParamCaption}
+)}}\label{class_string_a1a7c5c39d4dafbbf8516f5058a253f1a}
+
+
+A string egy megadott indexű elemének referenciájával tér vissza. 
+
+
+\begin{DoxyParams}{Paraméterek}
+{\em idx} & Karakter indexe. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Visszatérési érték}
+Karakter referenciája. Indexelési hiba esetén const char$\ast$ kivételt dob. 
+\end{DoxyReturn}
+\hypertarget{class_string_aa2cd8e755a2bc70e8ad11708a154d7a3}{\index{String@{String}!operator\mbox{[}$\,$\mbox{]}@{operator[]}}
+\index{operator\mbox{[}$\,$\mbox{]}@{operator[]}!String@{String}}
+\subsubsection[{operator[]}]{\setlength{\rightskip}{0pt plus 5cm}const char \& String\-::operator\mbox{[}$\,$\mbox{]} (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{idx}
+\end{DoxyParamCaption}
+) const}}\label{class_string_aa2cd8e755a2bc70e8ad11708a154d7a3}
+
+
+A string egy megadott indexű elemének referenciájával tér vissza. 
+
+
+\begin{DoxyParams}{Paraméterek}
+{\em idx} & Karakter indexe. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Visszatérési érték}
+Karakter referenciája. Indexelési hiba esetén const char$\ast$ kivételt dob. 
+\end{DoxyReturn}
+
+
+\subsection{Barát és kapcsolódó függvények dokumentációja}
+\hypertarget{class_string_aef14876e55f43fb4ffa7b91664467ecb}{\index{String@{String}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!String@{String}}
+\subsubsection[{operator$<$$<$}]{\setlength{\rightskip}{0pt plus 5cm}std\-::ostream\& operator$<$$<$ (
+\begin{DoxyParamCaption}
+\item[{std\-::ostream \&}]{os, }
+\item[{const {\bf String} \&}]{s0}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [friend]}}}\label{class_string_aef14876e55f43fb4ffa7b91664467ecb}
+
+
+Kiíró operátor. 
+
+
+\begin{DoxyParams}{Paraméterek}
+{\em os} & Ostream típusú objektum. \\
+\hline
+{\em s0} & \hyperlink{class_string}{String}, amit kiírunk. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Visszatérési érték}
+os 
+\end{DoxyReturn}
+\hypertarget{class_string_aea8ed420ad5e70828bc42b0fb9b49366}{\index{String@{String}!operator$>$$>$@{operator$>$$>$}}
+\index{operator$>$$>$@{operator$>$$>$}!String@{String}}
+\subsubsection[{operator$>$$>$}]{\setlength{\rightskip}{0pt plus 5cm}std\-::istream\& operator$>$$>$ (
+\begin{DoxyParamCaption}
+\item[{std\-::istream \&}]{is, }
+\item[{{\bf String} \&}]{s0}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [friend]}}}\label{class_string_aea8ed420ad5e70828bc42b0fb9b49366}
+
+
+Beolvas az istream-\/ről egy szót egy String-\/be. 
+
+
+\begin{DoxyParams}{Paraméterek}
+{\em is} & Istream típusú objektum. \\
+\hline
+{\em s0} & \hyperlink{class_string}{String}, amibe beolvas. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Visszatérési érték}
+is 
+\end{DoxyReturn}
+
+
+Ez a dokumentáció az osztályról a következő fájlok alapján készült\-:\begin{DoxyCompactItemize}
+\item 
+String.\-h\item 
+String.\-cpp\end{DoxyCompactItemize}
